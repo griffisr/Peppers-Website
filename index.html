@@ -7,26 +7,38 @@
 <link rel="stylesheet" href="mainStyle.css">
 <link rel="stylesheet" href="redStyle.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<style>
+    body, html {height: 100%}
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+    .menu {display: none}
+    .bgimg {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("Images/TacosBanner.png");
+      min-height: min-content;
+    }
+    </style>
 <body>
 
 <!-- Side Navigation -->
 <nav class="sidebar bar-block card animate-left center" style="display:none" id="mySidebar">
-  <button class="bar-item button" onclick="w3_close()">Close <i class="fa fa-remove"></i></button>
-  
-  <a href="#" class="bar-item button">Link 1</a>
-  <a href="#" class="bar-item button">Link 2</a>
-  <a href="#" class="bar-item button">Link 3</a>
-  <a href="#" class="bar-item button">Link 4</a>
+  <button class="bar-item button" onclick="menu_close()">Close <i class="fa fa-remove"></i></button>
+  <a href="#" class="bar-item button">Home</a>
+  <a href="menu.html" class="bar-item button">Menu</a>
+  <a href="locations.html" class="bar-item button">Locations</a>
+  <a href="facebookAPI.html" class="bar-item button">Find Us On Facebook!</a>
 </nav>
 
 <!-- Header -->
-<header class="container theme padding" id="myHeader">
-  <i onclick="w3_open()" class="fa fa-bars xlarge button theme"></i> 
+<header class="bgimg container theme padding" id="myHeader" style="background-attachment: fixed; background-position: center;">
+  
+<i onclick="menu_open()" class="fa fa-bars xlarge button theme"></i> 
+<img class="center center_img" src="Images/PeppersLogo.jpg" width="25%" height="25%">
+
   <div class="center">
-  <h4>BEAUTIFUL RESPONSIVE WEB SITES</h4>
-  <h1 class="xxxlarge animate-bottom">BUILT WITH W3.CSS</h1>
+  <h1 class="xxxlarge animate-bottom" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Peppers Mexican Grill</h1>
     <div class="padding-32">
-      <button class="btn xlarge theme-dark hover-red" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">LEARN W3.CSS</button>
+      <button class="btn xlarge theme-dark hover-red" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">See Our Menu</button>
     </div>
   </div>
 </header>
@@ -48,6 +60,53 @@
       </footer>
     </div>
 </div>
+
+
+<!-- About Container -->
+<div class="container padding-64 theme-dark xlarge" id="about">
+    <div class="content">
+      <h1 class="center jumbo" style="margin-bottom:64px">Meet The Peppers Team</h1>
+      <p>Peppers Originally opened in Milan Michigan in 20?? Text text text text text text text text text text text text text text text</p>
+
+
+      <div class="row">
+        <div class="half container">
+          <h2>Meet Maria and Marco</h2>  
+          <p>On small screens (max 600 pixels) it automatically resizes to full screen width.</p>
+        </div>
+        <div class="half container">
+            <img src="Images/CoupleCostume.jpg" style="width:350px;;" class="circle" alt="img">  
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="half container">
+            <img src="Images/CoupleCostume.jpg" style="width:350px;;" class="circle" alt="img">
+        </div>
+        <div class="half container">
+            <h2>Meet Maria and Marco</h2>  
+            <p>On small screens (max 600 pixels) it automatically resizes to full screen width.</p>      
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+<h2 class="center">Slideshows</h2>
+<div class="content" style="max-width:800px;position:relative">
+
+<img class="mySlides animate-opacity" src="/w3images/snow.jpg" style="width:100%">
+<img class="mySlides animate-opacity" src="/w3images/lights.jpg" style="width:100%">
+<img class="mySlides animate-opacity" src="/w3images/mountains.jpg" style="width:100%">
+<img class="mySlides animate-opacity" src="/w3images/forest.jpg" style="width:100%">
+
+<a class="button hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)">&#10094;</a>
+<a class="button hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs(+1)">&#10095;</a>
+</div>
+
 
 <div class="row-padding center margin-top">
 <div class="third">
@@ -83,6 +142,8 @@
   </div>
 </div>
 </div>
+
+
 
 <div class="container">
 <hr>
@@ -386,17 +447,7 @@
 </div>
 <hr>
 
-<h2 class="center">Slideshows</h2>
-<div class="content" style="max-width:800px;position:relative">
 
-<img class="mySlides animate-opacity" src="/w3images/snow.jpg" style="width:100%">
-<img class="mySlides animate-opacity" src="/w3images/lights.jpg" style="width:100%">
-<img class="mySlides animate-opacity" src="/w3images/mountains.jpg" style="width:100%">
-<img class="mySlides animate-opacity" src="/w3images/forest.jpg" style="width:100%">
-
-<a class="button hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)">&#10094;</a>
-<a class="button hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs(+1)">&#10095;</a>
-</div>
 
 <div class="container">
 <hr>
@@ -528,7 +579,7 @@
 <!-- Script for Sidebar, Tabs, Accordions, Progress bars and slideshows -->
 <script>
 // Side navigation
-function w3_open() {
+function menu_open() {
   var x = document.getElementById("mySidebar");
   x.style.width = "100%";
   x.style.fontSize = "40px";
@@ -536,7 +587,7 @@ function w3_open() {
   x.style.display = "block";
 }
 
-function w3_close() {
+function menu_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
 
