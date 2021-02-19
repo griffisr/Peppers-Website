@@ -35,28 +35,35 @@
 <header class="bgimg container theme padding" id="myHeader" style="background-attachment: fixed; background-position: center;">
   
 <i onclick="menu_open()" class="fa fa-bars xlarge button theme-dark hover-theme"></i> 
+
 <h1 class="xxxlarge animate-bottom center jumbo" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Menu</h1>
 </header>
 
 
 
 <!-- Menu Container -->
-<div class="" id="menu">
+<div class="container content" id="menu">
     
         <div id="slider-wrapper">
             <div class="inner-wrapper">
                 <input checked type="radio" name="slide" class="control" id="Slide1"/>
                     <label for="Slide1" id="s1"></label>
+
                 <input type="radio" name="slide" class="control" id="Slide2"/>
                     <label for="Slide2" id="s2"></label>
+
                 <input type="radio" name="slide" class="control" id="Slide3"/>
                     <label for="Slide3" id="s3"></label>
+
                 <input type="radio" name="slide" class="control" id="Slide4"/>
                     <label for="Slide4" id="s4"></label>
-                    <input type="radio" name="slide" class="control" id="Slide5"/>
+
+                <input type="radio" name="slide" class="control" id="Slide5"/>
                     <label for="Slide5" id="s5"></label>
-                    <input type="radio" name="slide" class="control" id="Slide6"/>
+
+                <input type="radio" name="slide" class="control" id="Slide6"/>
                     <label for="Slide6" id="s6"></label>
+
                 <div class="overflow-wrapper">
                     <a class="slide"><img src="Images/menu1.jpg"/></a>
                     <a class="slide"><img src="Images/menu2.jpg"/></a>
@@ -68,7 +75,6 @@
             </div>
         </div>
   </div>
-
 
   <body>
 	
@@ -168,10 +174,12 @@ function menu_open() {
   x.style.fontSize = "40px";
   x.style.paddingTop = "10%";
   x.style.display = "block";
+  document.getElementById("slider-wrapper").style.display = "none";
 }
 
 function menu_close() {
   document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("slider-wrapper").style.display = "";
 }
 
 // Tabs

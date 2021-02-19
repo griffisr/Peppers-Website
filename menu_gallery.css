@@ -1,9 +1,12 @@
+
 #slider-wrapper {
-    width: 50%;
-    height: 1112.14px;
+    width: 940px;
+    max-width: 90%;
+    height: 670px;
+    min-height: 60%;
     margin: 50px auto;
     position: relative;
-    margin-bottom: 0px;
+    margin-bottom: 40px;
     background: rgba(0,0,0,0.5);
     overflow: hidden;
   }
@@ -28,8 +31,8 @@
   #s1:hover, #s2:hover, #s3:hover,#s4:hover,#s5:hover,#s6:hover{ opacity: 1;}
   .inner-wrapper {
     width: 100%;
-    height: 1112.14px;
-    position: absolute;
+    height: 100%;
+    position: static;
     top: 0;
     left: 0;
     margin-bottom: 0px;
@@ -51,7 +54,7 @@
   #Slide6:checked + #s6 {opacity: 1;}
 
   .overflow-wrapper {
-    width: 400%;
+    width: 625%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -64,6 +67,7 @@
     transition: all 0.3s ease-in-out;
   }
   .slide img {
-    width: 25%;
+    width: 16%;
     float: left;
+    
   }
