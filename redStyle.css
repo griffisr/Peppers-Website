@@ -18,5 +18,6 @@
 .border-theme {border-color:#f44336 !important}
 
 .hover-theme:hover {color:#fff !important; background-color:#f44336 !important}
+.hover-theme-dark:hover {color:#fff !important; background-color:#8d1007 !important}
 .hover-text-theme:hover {color:#f44336 !important}
 .hover-border-theme:hover {border-color:#f44336 !important}

@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html>
+<title>Peppers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="mainStyle.css">
+<link rel="stylesheet" href="redStyle.css">
+<link rel="stylesheet" href="menu_gallery.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+
+<style>
+    body, html {height: 100%}
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+    .menu {display: none}
+    .bgimg {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("Images/TacosBanner.png");
+      min-height: min-content;
+    }
+    </style>
+<body>
+
+<!-- Side Navigation -->
+<nav class="sidebar bar-block card animate-left center" style="display:none;" id="mySidebar">
+  <button class="bar-item button" onclick="menu_close()">Close <i class="fa fa-remove"></i></button>
+  <a href="index.html" class="bar-item button">Home</a>
+  <a href="menu.html" class="bar-item button">Menu</a>
+  <a href="locations.html" class="bar-item button">Locations</a>
+  <a href="facebookAPI.html" class="bar-item button">Find Us On Facebook!</a>
+</nav>
+
+<!-- Header -->
+<header class="bgimg container theme padding" id="myHeader" style="background-attachment: fixed; background-position: center;">
+  
+<i onclick="menu_open()" class="fa fa-bars xlarge button theme-dark hover-theme"></i> 
+<h1 class="xxxlarge animate-bottom center jumbo" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Menu</h1>
+</header>
+
+
+
+<!-- Menu Container -->
+<div class="" id="menu">
+    
+        <div id="slider-wrapper">
+            <div class="inner-wrapper">
+                <input checked type="radio" name="slide" class="control" id="Slide1"/>
+                    <label for="Slide1" id="s1"></label>
+                <input type="radio" name="slide" class="control" id="Slide2"/>
+                    <label for="Slide2" id="s2"></label>
+                <input type="radio" name="slide" class="control" id="Slide3"/>
+                    <label for="Slide3" id="s3"></label>
+                <input type="radio" name="slide" class="control" id="Slide4"/>
+                    <label for="Slide4" id="s4"></label>
+                    <input type="radio" name="slide" class="control" id="Slide5"/>
+                    <label for="Slide5" id="s5"></label>
+                    <input type="radio" name="slide" class="control" id="Slide6"/>
+                    <label for="Slide6" id="s6"></label>
+                <div class="overflow-wrapper">
+                    <a class="slide"><img src="Images/menu1.jpg"/></a>
+                    <a class="slide"><img src="Images/menu2.jpg"/></a>
+                    <a class="slide"><img src="Images/menu3.jpg"/></a>
+                    <a class="slide"><img src="Images/menu4.jpg"/></a>
+                    <a class="slide"><img src="Images/menu5.jpg"/></a>
+                    <a class="slide"><img src="Images/menu6.jpg"/></a>
+                </div>
+            </div>
+        </div>
+  </div>
+
+
+  <body>
+	
+
+  
+
+
+  <!-- Footer -->
+<footer class="container padding-64 center theme-dark xlarge">
+  <i class="fa fa-facebook-official hover-opacity"></i>
+  <i class="fa fa-instagram hover-opacity"></i>
+  <i class="fa fa-snapchat hover-opacity"></i>
+  <i class="fa fa-pinterest-p hover-opacity"></i>
+  <i class="fa fa-twitter hover-opacity"></i>
+  <i class="fa fa-linkedin hover-opacity"></i>
+  <p class="medium">Designed and created by: Riley Griffis</p>
+</footer>
+
+
+
+<!-- Loading JavaScript Codes. -->
+<script src="scripts/jquery-2.1.0.js"></script>
+<script src="scripts/contentSliderScript.js"></script>
+<script>
+    // 
+    jQuery(document).ready(function ($) {
+        // creating a container variable to hold the 'UL' element. It uses method chaining.
+        var container=$('div.slider')
+                                    .css('overflow','hidden')
+                                    .children('ul');
+        
+        // creating pagination variable which holds the 'UL' element.
+        var pagicontainer=$('div.pagi-container').children('ul');
+        
+        /* 
+        On the event of mouse-hover, 
+            i) Change the visibility of Button Controls.
+            ii) SET/RESET the "intv" variable to switch between AutoSlider and Stop mode.
+        */
+        $('.gallery').hover(function( e ){
+            $('.slider-nav').toggle();
+            return e.type=='mouseenter'?clearInterval(intv):autoSlider();
+        });
+        
+        // Creating the 'slider' instance which will set initial parameters for the Slider.
+        var sliderobj= new slider(container,pagicontainer,$('.slider-nav'));
+        /*
+        This will trigger the 'setCurrentPos' and 'transition' methods on click of any button
+         "data-dir" attribute associated with the button will determine the direction of sliding.
+        */
+        sliderobj.nav.find('button').on('click', function(){
+            sliderobj.setCurrentPos($(this).data('dir'));
+            sliderobj.transition();
+        });
+        
+        /*
+        This will trigger the 'setCurrentPos' and 'transition' methods on click of any Pagination icons.
+         "data-pgno" attribute associated with the Pagination icons will determine the value of current variable.
+        */
+        sliderobj.pagicontainer.find('li a').on('click', function(){
+            sliderobj.setCurrentPos($(this).data('pgno'));
+            sliderobj.transition();					
+        });
+        
+        autoSlider(); // Calling autoSlider() method on Page Load.
+        
+        /* 
+        This function will initialize the interval variable which will cause execution of the inner function after every 3 seconds automatically.
+        */
+        function autoSlider()
+        {
+            return intv = setInterval(function(){
+                sliderobj.setCurrentPos('next');
+                sliderobj.transition();
+            }, 3000);
+        }
+        
+    });
+
+
+/* Script for Sidebar, Tabs, Accordions, Progress bars and slideshows */
+
+$(document).ready(function() {
+      $("#owl-demo").owlCarousel({
+
+      navigation : true,
+      slideSpeed : 300,
+      paginationSpeed : 400,
+      singleItem : true
+      });
+    });
+
+// Side navigation
+function menu_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "100%";
+  x.style.fontSize = "40px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+function menu_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+    activebtn[i].className = activebtn[i].className.replace(" theme-dark", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " theme-dark";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
+
+// Accordions
+function myAccFunc(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("show") == -1) {
+    x.className += " show";
+  } else { 
+    x.className = x.className.replace(" show", "");
+  }
+}
+
+// Slideshows
+var slideIndex = 1;
+
+function plusDivs(n) {
+  slideIndex = slideIndex + n;
+  showDivs(slideIndex);
+}
+
+function showDivs(n) {
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+showDivs(1);
+
+</script>
+
+</body>
+</html>
