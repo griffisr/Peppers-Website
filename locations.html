@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<title>Peppers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="mainStyle.css">
+<link rel="stylesheet" href="redStyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<style>
+    body, html {height: 100%}
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+    .menu {display: none}
+    .bgimg {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("Images/TacosBanner.png");
+      min-height: min-content;
+    }
+    </style>
+<body>
+
+<!-- Side Navigation -->
+<nav class="sidebar bar-block card animate-left center" style="display:none;" id="mySidebar">
+  <button class="bar-item button" onclick="menu_close()">Close <i class="fa fa-remove"></i></button>
+  <a href="index.html" class="bar-item button">Home</a>
+  <a href="menu.html" class="bar-item button">Menu</a>
+  <a href="locations.html" class="bar-item button">Locations</a>
+  <a href="facebookAPI.html" class="bar-item button">Find Us On Facebook!</a>
+</nav>
+
+<!-- Header -->
+<header class="bgimg container theme padding" id="myHeader" style="background-attachment: fixed; background-position: center;">
+  
+    <i onclick="menu_open()" class="fa fa-bars xlarge button theme-dark hover-theme"></i> 
+    
+    <h1 class="xxxlarge animate-bottom center jumbo" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Locations</h1>
+    </header>
+
+
+
+
+<!-- About Container -->
+<div class="container padding-64 theme-light xlarge" id="about">
+    <div class="content">
+      <h1 class="center jumbo" style="margin-bottom:64px">Peppers is here to serve!</h1>
+      <p style="text-align: center;">Peppers strives for excellence regardless of location! </p>
+
+
+      <div class="row">
+        <div class="half container">
+          <h2>Milan</h2>  
+          <p>On small screens (max 600 pixels) it automatically resizes to full screen width.</p>
+        </div>
+        <div class="half container">
+            <img src="Images/mapM.png" style="width:350px;;" class="circle" alt="img">  
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="half container">
+            <img src="Images/mapT.png" style="width:350px;;" class="circle" alt="img">
+        </div>
+        <div class="half container">
+            <h2>Tecumseh</h2>  
+            <p>On small screens (max 600 pixels) it automatically resizes to full screen width.</p>      
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+<footer class="container padding-64 center theme-dark xlarge">
+  <i class="fa fa-facebook-official hover-opacity"></i>
+  <i class="fa fa-instagram hover-opacity"></i>
+  <i class="fa fa-snapchat hover-opacity"></i>
+  <i class="fa fa-pinterest-p hover-opacity"></i>
+  <i class="fa fa-twitter hover-opacity"></i>
+  <i class="fa fa-linkedin hover-opacity"></i>
+  <p class="medium">Designed and created by: Riley Griffis</p>
+</footer>
+
+
+
+
+<script type="text/javascript" src="mainScript.js"></script>
+
+</body>
+</html>
