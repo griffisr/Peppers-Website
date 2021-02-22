@@ -478,3 +478,118 @@
   </div>
   <p>Remember to check out our&nbsp;&nbsp;<a href="w3css_references.asp" class="btn theme" target="_blank">W3.CSS Reference</a></p>
 </footer>
+
+
+
+
+
+<div id="slider-wrapper">
+
+            <div class="inner-wrapper">
+                <input checked type="radio" name="slide" class="control" id="Slide1"/>
+                    <label for="Slide1" id="s1"></label>
+
+                <input type="radio" name="slide" class="control" id="Slide2"/>
+                    <label for="Slide2" id="s2"></label>
+
+                <input type="radio" name="slide" class="control" id="Slide3"/>
+                    <label for="Slide3" id="s3"></label>
+
+                <input type="radio" name="slide" class="control" id="Slide4"/>
+                    <label for="Slide4" id="s4"></label>
+
+                <input type="radio" name="slide" class="control" id="Slide5"/>
+                    <label for="Slide5" id="s5"></label>
+
+                <input type="radio" name="slide" class="control" id="Slide6"/>
+                    <label for="Slide6" id="s6"></label>
+
+                <div class="overflow-wrapper">
+                    <a class="slide"><img src="Images/menu1.jpg"/></a>
+                    <a class="slide"><img src="Images/menu2.jpg"/></a>
+                    <a class="slide"><img src="Images/menu3.jpg"/></a>
+                    <a class="slide"><img src="Images/menu4.jpg"/></a>
+                    <a class="slide"><img src="Images/menu5.jpg"/></a>
+                    <a class="slide"><img src="Images/menu6.jpg"/></a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+#slider-wrapper {
+    width: 621px;
+    max-width: 100%;
+    height: 1024px;
+    max-height: min-content;
+    margin: 50px auto;
+    position: relative;
+    margin-bottom: 40px;
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+  }
+  #s1, #s2, #s3, #s4, #s5, #s6{
+    padding: 6px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    border-radius: 25px;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 999;
+  } 
+  #s1 {margin-left: -60px;}
+  #s2 {margin-left: -36px;}
+  #s3 {margin-left: -12px;}
+  #s4 {margin-left: 12px;}
+  #s5 {margin-left: 36px;}
+  #s6 {margin-left: 60px;}
+
+  #s1:hover, #s2:hover, #s3:hover,#s4:hover,#s5:hover,#s6:hover{ opacity: 1;}
+
+  .inner-wrapper {
+    width: 100%;
+    height: 100%;
+    position: static;
+    top: 0;
+    left: 0;
+    margin-bottom: 0px;
+    overflow: hidden;
+  }
+  .control {display: none;}
+  #Slide1:checked ~ .overflow-wrapper { margin-left: 0%;}
+  #Slide2:checked ~ .overflow-wrapper { margin-left: -100%;}
+  #Slide3:checked ~ .overflow-wrapper { margin-left: -200%;}
+  #Slide4:checked ~ .overflow-wrapper { margin-left: -300%;}
+  #Slide5:checked ~ .overflow-wrapper { margin-left: -400%;}
+  #Slide6:checked ~ .overflow-wrapper { margin-left: -500%;}
+
+  #Slide1:checked + #s1 {opacity: 1;}
+  #Slide2:checked + #s2 {opacity: 1;}
+  #Slide3:checked + #s3 {opacity: 1;}
+  #Slide4:checked + #s4 {opacity: 1;}
+  #Slide5:checked + #s5 {opacity: 1;}
+  #Slide6:checked + #s6 {opacity: 1;}
+
+  .overflow-wrapper {
+    width: 625%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: hidden;
+    z-index: 1;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  .slide img {
+    width: 16%;
+    height: 100%;
+    float: left;
+    
+  }
