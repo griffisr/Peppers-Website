@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="mainStyle.css">
 <link rel="stylesheet" href="redStyle.css">
+<link rel="stylesheet" href="menu_gallery.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 <style>
     body, html {height: 100%}
@@ -20,28 +21,31 @@
     </style>
 <body>
 
-<!-- Side Navigation -->
+<!-- Side Navigation
 <nav class="sidebar bar-block card animate-left center" style="display:none;" id="mySidebar">
   <button class="bar-item button" onclick="menu_close()">Close <i class="fa fa-remove"></i></button>
   <a href="#" class="bar-item button">Home</a>
   <a href="menu.html" class="bar-item button">Menu</a>
   <a href="locations.html" class="bar-item button">Locations</a>
   <a href="facebookAPI.html" class="bar-item button">Find Us On Facebook!</a>
-</nav>
+</nav> -->
 
 <!-- Header -->
 <header class="bgimg container theme padding" id="myHeader" style="background-attachment: fixed; background-position: center;">
   
-<i onclick="menu_open()" class="fa fa-bars xlarge button theme-dark"></i> 
+<!--<i onclick="menu_open()" class="fa fa-bars xlarge button theme-dark"></i> --> 
 <img class="center center_img" src="Images/PeppersLogo.jpg" width="25%" height="25%">
 
   <div class="center">
   <h1 class="xxxlarge animate-bottom" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Peppers Mexican Grill</h1>
     <div class="padding-32">
-      <button class="btn xlarge theme-dark hover-red" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Modal</button>
+      <button class="btn xlarge theme-dark hover-red" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Menu</button>
     </div>
   </div>
 </header>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="uRUMaKMI"></script>
 
 <!-- Modal -->
 <div id="id01" class="modal">
@@ -49,14 +53,42 @@
       <header class="container theme"> 
         <span onclick="document.getElementById('id01').style.display='none'"
         class="button display-topright">&times;</span>
-        <h4>Oh snap! We just showed you a modal..</h4>
-        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+        <h2 style="text-align: center;">Menu</h2>
       </header>
       <div class="padding">
-        <p>Cool huh? Ok, enough teasing around..</p>
+        <div id="slider-wrapper">
+          <div class="inner-wrapper">
+              <input checked type="radio" name="slide" class="control" id="Slide1"/>
+                  <label for="Slide1" id="s1"></label>
+
+              <input type="radio" name="slide" class="control" id="Slide2"/>
+                  <label for="Slide2" id="s2"></label>
+
+              <input type="radio" name="slide" class="control" id="Slide3"/>
+                  <label for="Slide3" id="s3"></label>
+
+              <input type="radio" name="slide" class="control" id="Slide4"/>
+                  <label for="Slide4" id="s4"></label>
+
+              <input type="radio" name="slide" class="control" id="Slide5"/>
+                  <label for="Slide5" id="s5"></label>
+
+              <input type="radio" name="slide" class="control" id="Slide6"/>
+                  <label for="Slide6" id="s6"></label>
+
+              <div class="overflow-wrapper">
+                  <a class="slide"><img src="Images/menu1.jpg"/></a>
+                  <a class="slide"><img src="Images/menu2.jpg"/></a>
+                  <a class="slide"><img src="Images/menu3.jpg"/></a>
+                  <a class="slide"><img src="Images/menu4.jpg"/></a>
+                  <a class="slide"><img src="Images/menu5.jpg"/></a>
+                  <a class="slide"><img src="Images/menu6.jpg"/></a>
+              </div>
+          </div>
+      </div>
       </div>
       <footer class="container theme">
-        <p>Modal footer</p>
+        <br>
       </footer>
     </div>
 </div>
@@ -90,6 +122,91 @@
             <p>On small screens (max 600 pixels) it automatically resizes to full screen width.</p>      
         </div>
       </div>
+      
+    </div>
+  </div>
+
+
+<!--Locations Container-->
+  <div class="container padding-64 theme-dark xlarge" id="about">
+    <div class="content">
+      <h1 class="center jumbo" style="margin-bottom:64px">Peppers is here to serve!</h1>
+
+
+      <div class="row">
+        <div class="half container">
+          <h2>Milan</h2>  
+          <p>On small screens (max 600 pixels) it automatically resizes to full screen width.</p>
+        </div>
+        <div class="half container">
+            <img src="Images/mapM.png" style="width:350px;;" class="circle" alt="img">  
+        </div>
+      </div>
+
+      <br>
+
+      <div class="row">
+        <div class="half container">
+          <h2>Tecumseh</h2>  
+          <p>On small screens (max 600 pixels) it automatically resizes to full screen width.</p>      
+      </div>
+        <div class="half container">
+            <img src="Images/mapT.png" style="width:350px;;" class="circle" alt="img">
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+
+  <!--Filler for FB API live view of FB page-->
+  <div class="row-padding center margin-top theme-light">
+    <div class="third">
+      <div class="card container" style="min-height:460px">
+        <div class="fb-post fbcontainer" data-href="https://www.facebook.com/PeppersMilan/posts/2813883488864522" data-width="350" data-show-text="true">
+          <blockquote cite="https://www.facebook.com/PeppersMilan/posts/2813883488864522" class="fb-xfbml-parse-ignore">
+            <p>The perfect combination for today is MARGARITAS and FAJABO ❗️</p>
+          Posted by <a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a> on&nbsp;<a href="https://www.facebook.com/PeppersMilan/posts/2813883488864522">Wednesday, February 17, 2021</a></blockquote></div>
+      </div>
+    </div>
+    
+    <div class="third">
+      <div class="card container" style="min-height:460px">
+        <div class="fb-post" data-href="https://www.facebook.com/PeppersMilan/posts/2812960378956833" data-width="350" data-show-text="true"><blockquote cite="https://www.facebook.com/PeppersMilan/posts/2812960378956833" class="fb-xfbml-parse-ignore"><p>You have a meeting tonight at Peppers. Taco Tuesday and Coronas!  
+          Be safe ❄️</p>Posted by <a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a> on&nbsp;<a href="https://www.facebook.com/PeppersMilan/posts/2812960378956833">Tuesday, February 16, 2021</a></blockquote></div>
+  
+      </div>
+    </div>
+    
+    <div class="third">
+      <div class="card container" style="min-height:460px">
+        <div class="fb-post" data-href="https://www.facebook.com/PeppersMilan/posts/2786410218278516" data-width="350" data-show-text="true"><blockquote cite="https://www.facebook.com/PeppersMilan/posts/2786410218278516" class="fb-xfbml-parse-ignore"><p>Start your Tuesday right, with the BEST street tacos 🌮😋</p>Posted by <a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a> on&nbsp;<a href="https://www.facebook.com/PeppersMilan/posts/2786410218278516">Tuesday, January 12, 2021</a></blockquote></div>
+      </div>
+    </div>
+    </div>
+
+
+  <!-- About Container -->
+  <div class="container padding-64 theme-light xlarge" id="about">
+    <div class="content">
+      <h1 class="center jumbo" style="margin-bottom:64px">Contact Us</h1>
+
+      <form id="contact-form" method="POST">
+        <label>Name</label>
+        <input id="name-input" class="input-field" type="text" name="name">
+
+        <label>Subject</label>
+        <input id="subject-input"class="input-field" type="text" name="subject">
+
+        <label>Email</label>
+        <input id="email-input" class="input-field" type="text" name="email">
+
+        <label>Message</label>
+        <textarea id="message-input" class="input-field" name="message"></textarea>
+
+        <input id="submit-btn" type="submit" value="Send" onclick="submitToAPI(event)">
+    </form>
+      
       
     </div>
   </div>
