@@ -26,7 +26,16 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 /* End extract */
 
 
+.navBtns{
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  
+}
 
+.navBtns button{
+  display: table-cell;
+}
 
 .center_img {
     display: block;

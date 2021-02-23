@@ -21,26 +21,34 @@
     </style>
 <body>
 
-<!-- Side Navigation
+<!-- Side Navigation -->
 <nav class="sidebar bar-block card animate-left center" style="display:none;" id="mySidebar">
   <button class="bar-item button" onclick="menu_close()">Close <i class="fa fa-remove"></i></button>
-  <a href="#" class="bar-item button">Home</a>
-  <a href="menu.html" class="bar-item button">Menu</a>
-  <a href="locations.html" class="bar-item button">Locations</a>
-  <a href="facebookAPI.html" class="bar-item button">Find Us On Facebook!</a>
-</nav> -->
+  <a href="#" onclick= " return menu_close()" class="bar-item button">Home</a>
+  <a href="#" onclick= " return menu_close(), document.getElementById('id01').style.display='block'" class="bar-item button">Menu</a>
+  <a href="#about" onclick= " return menu_close()" class="bar-item button">About Us</a>
+  <a href="#locations" onclick= " return menu_close()" class="bar-item button">Loctions</a>
+  <a href="#updates" onclick= " return menu_close()" class="bar-item button">Find Us On Facebook!</a>
+  <a href="#contact-form" onclick= " return menu_close()" class="bar-item button">Contact Us</a>
+</nav>
 
 <!-- Header -->
 <header class="bgimg container theme padding" id="myHeader" style="background-attachment: fixed; background-position: center;">
   
-<!--<i onclick="menu_open()" class="fa fa-bars xlarge button theme-dark"></i> --> 
+<i onclick="menu_open()" class="fa fa-bars xlarge button theme-dark"></i> 
 <img class="center center_img" src="Images/PeppersLogo.jpg" width="25%" height="25%">
 
   <div class="center">
   <h1 class="xxxlarge animate-bottom" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Peppers Mexican Grill</h1>
-    <div class="padding-32">
+    <!--<div class="padding-32">
       <button class="btn xlarge theme-dark hover-red" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Menu</button>
-    </div>
+    </div>-->
+    <div class=" navBtns">
+    <button class="btn xlarge theme-dark hover-red" onclick="window.location.href='#about';" style="font-weight:900;">About Us</button>
+    <button class="btn xlarge theme-dark hover-red" onclick="window.location.href='#locations';" style="font-weight:900;">Locations</button>
+    <button class="btn xlarge theme-dark hover-red" onclick="window.location.href='#updates';" style="font-weight:900;">Updates</button>
+    <button class="btn xlarge theme-dark hover-red" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Menu</button>
+  </div>
   </div>
 </header>
 
@@ -128,7 +136,7 @@
 
 
 <!--Locations Container-->
-  <div class="container padding-64 theme-dark xlarge" id="about">
+  <div class="container padding-64 theme-dark xlarge" id="locations">
     <div class="content">
       <h1 class="center jumbo" style="margin-bottom:64px">Peppers is here to serve!</h1>
 
@@ -160,7 +168,7 @@
   </div>
 
   <!--Filler for FB API live view of FB page-->
-  <div class="row-padding center margin-top theme-light">
+  <div class="row-padding center margin-top theme-light" id="updates">
     <div class="third">
       <div class="card container" style="min-height:460px">
         <div class="fb-post fbcontainer" data-href="https://www.facebook.com/PeppersMilan/posts/2813883488864522" data-width="350" data-show-text="true">
@@ -187,7 +195,7 @@
 
 
   <!-- About Container -->
-  <div class="container padding-64 theme-light xlarge" id="about">
+  <div class="container padding-64 theme-light xlarge" id="contact-form">
     <div class="content">
       <h1 class="center jumbo" style="margin-bottom:64px">Contact Us</h1>
 
