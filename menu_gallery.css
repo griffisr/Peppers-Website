@@ -17,7 +17,6 @@
     --buttonColor: black;
 }
 
-
 #slider-wrapper {
     width: 621px;
     max-width: 100%;
@@ -101,9 +100,10 @@
     margin: 0 auto;
     border: 1px solid var(--borderColor);
     padding: 15px;
-    border-radius: 5px;
+    border-radius: 12px;
     background-color: var(--mainColor);
     margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 #contact-form label{
