@@ -87,60 +87,64 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <header class="container padding-32 center black bgimg" id="home" style="background-attachment: fixed; background-position: center;">
 
     <img src="Images/PeppersLogo.jpg" alt="peppers" class="image" width="30%" height="30%">
-    <h1 class="jumbo" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Peppers<span class="hide-small">Mexican Grill.</span></h1>
+    <h1 class="jumbo" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Peppers <span class="hide-small">Mexican Grill.</span></h1>
   </header>
 
   <!--Menu Gallery-->
   <div class="container padding-64 theme-dark xlarge" id="locations">
-    <div class="content">
-      <h2>Menu:</h2>
+    <div class="content" style="display: flex; flex-direction: row;;">
 
-  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+      <button class="prev" onclick="plusSlides()" style="">&#10094;</button>
+      
+    <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu1.jpg" itemprop="contentUrl" data-size="1243x2048">
-          <img src="Images/menu1.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-    </a>
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu1.jpg" itemprop="contentUrl" data-size="1243x2048">
+          <img class = "menu_display fade" src="Images/menu1.jpg" itemprop="thumbnail" alt="Image description" id="menu1" />
+        </a>
+      </figure>
 
-                                          
-    </figure>
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu2.jpg" itemprop="contentUrl" data-size="1243x2048">
+          <img class = "menu_display fade" src="Images/menu2.jpg" itemprop="thumbnail" alt="Image description" style="display: none;" id="menu2"/>
+       </a>
+      </figure>
 
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu2.jpg" itemprop="contentUrl" data-size="1243x2048">
-          <img src="Images/menu2.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-    </figure>
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu3.jpg" itemprop="contentUrl" data-size="1243x2048">
+          <img class = "menu_display fade" src="Images/menu3.jpg" itemprop="thumbnail" alt="Image description" style="display: none;" id="menu3"/>
+        </a>
+      </figure>
 
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu3.jpg" itemprop="contentUrl" data-size="1243x2048">
-          <img src="Images/menu3.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-    </figure>
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu4.jpg" itemprop="contentUrl" data-size="1243x2048">
+          <img class = "menu_display fade" src="Images/menu4.jpg" itemprop="thumbnail" alt="Image description" style="display: none;" id="menu4"/>
+        </a>
+      </figure>
 
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu4.jpg" itemprop="contentUrl" data-size="1243x2048">
-          <img src="Images/menu4.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-    </figure>
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu5.jpg" itemprop="contentUrl" data-size="1243x2048">
+          <img class = "menu_display fade" src="Images/menu5.jpg" itemprop="thumbnail" alt="Image description" style="display: none;" id="menu5"/>
+        </a>
+      </figure>
 
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu5.jpg" itemprop="contentUrl" data-size="1243x2048">
-          <img src="Images/menu6.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-    </figure>
+      <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu6.jpg" itemprop="contentUrl" data-size="1243x2048">
+          <img class = "menu_display fade" src="Images/menu6.jpg" itemprop="thumbnail" alt="Image description"  style="display: none;" id="menu6"/>
+        </a>
+      </figure>
 
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu6.jpg" itemprop="contentUrl" data-size="1243x2048">
-          <img src="Images/menu6.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-    </figure>
+    </div>
 
-
+    <button class="next" onclick="plusSlides(1)" style="">&#10095;</button>
   </div>
-
-
-
+  <div style="text-align:center;">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+    <span class="dot" onclick="currentSlide(6)"></span>
   </div>
   </div>
 
@@ -527,6 +531,35 @@ if(hashData.pid && hashData.gid) {
 
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
+</script>
+
+<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("menu_display");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
 </script>
 
 </body>
