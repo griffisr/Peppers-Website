@@ -99,85 +99,112 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <div class="container padding-64 theme-dark xlarge" id="menu">
     <div class="content">
              <!-- Slider main container -->
-<div class="swiper-container" style="height: 1210px;">
+<div class="swiper-container" style="height: fit-content; max-width: 99%;">
   <!-- Additional required wrapper -->
-  <div class="swiper-wrapper" style="width: 99%; height: 1200px;">
+  <div class="swiper-wrapper" style="width: 99%;">
     <!-- Slides -->
-    <div class="swiper-slide"><img src="Images/menu1.jpg" style="width: 99%; height: 99%;"></div>
-    <div class="swiper-slide"><img src="Images/menu2.jpg" style="width: 99%; height: 99%;"></div>
-    <div class="swiper-slide"><img src="Images/menu3.jpg" style="width: 99%; height: 99%;"></div>
-    ...
+    <div class="swiper-slide" style="width: fit-content;"><img src="Images/menu1.jpg" style="width: 99%; "></div>
+    <div class="swiper-slide" style="width: fit-content;"><img src="Images/menu2.jpg" style="width: 99%;"></div>
+    <div class="swiper-slide" style="width: fit-content;"><img src="Images/menu3.jpg" style="width: 99%;"></div>
+    <div class="swiper-slide" style="width: fit-content;">4<img src="Images/menu4.jpg" style="width: 99%;"></div>
+    <div class="swiper-slide" style="width: fit-content;">5<img src="Images/menu5.jpg" style="width: 99%;"></div>
+    <div class="swiper-slide" style="width: fit-content;">6<img src="Images/menu6.jpg" style="width: 99%;"></div>
+    
+    
+    
+    
+    
 
   </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
 
   <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev" style="color: black;"></div>
+  <div class="swiper-button-next" style="color: black;"></div>
 
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
 </div>
 
   </div>
   </div>
 
-  <!-- Modal -->
-<div id="id01" class="modal">
-  <div class="modal-content card-4 animate-top">
-    <header class="container theme"> 
-      <span onclick="document.getElementById('id01').style.display='none'"
-      class="button display-topright">&times;</span>
-      <h2 style="text-align: center;">Menu</h2>
-    </header>
-    <div class="padding">
-      <div id="slider-wrapper">
-        <div class="inner-wrapper">
-            <input checked type="radio" name="slide" class="control" id="Slide1"/>
-                <label for="Slide1" id="s1"></label>
 
-            <input type="radio" name="slide" class="control" id="Slide2"/>
-                <label for="Slide2" id="s2"></label>
 
-            <input type="radio" name="slide" class="control" id="Slide3"/>
-                <label for="Slide3" id="s3"></label>
+   <!-- Testimonials & Locations -->
+   <div class="content justify text-grey padding-64" id="about">
+    <div class="content">
+      <!--<h1 class="center jumbo text-white" style="margin-bottom:64px">Peppers is here to serve!</h1>-->
 
-            <input type="radio" name="slide" class="control" id="Slide4"/>
-                <label for="Slide4" id="s4"></label>
 
-            <input type="radio" name="slide" class="control" id="Slide5"/>
-                <label for="Slide5" id="s5"></label>
+        <div class="row">
 
-            <input type="radio" name="slide" class="control" id="Slide6"/>
-                <label for="Slide6" id="s6"></label>
-
-            <div class="overflow-wrapper">
-                <a class="slide"><img src="Images/menu1.jpg"/></a>
-                <a class="slide"><img src="Images/menu2.jpg"/></a>
-                <a class="slide"><img src="Images/menu3.jpg"/></a>
-                <a class="slide"><img src="Images/menu4.jpg"/></a>
-                <a class="slide"><img src="Images/menu5.jpg"/></a>
-                <a class="slide"><img src="Images/menu6.jpg"/></a>
-            </div>
+          <div class="half container">
+            <img src="Images/peppersMilan1.jpg" style="width:370px;;" class="circle" alt="img">  
         </div>
+
+          <div class="half container">
+            <h2 class="text-white">Milan</h2>  
+            <div class="row">
+              <div class="col s6 text-white">
+                <p>Sun & Mon  CLOSED</p>
+                <p>Tuesday  10.00-9.00</p>
+                <p>Wednesday  10.00-9.00</p>
+                
+              </div>
+              <div class="col s6 text-white">
+                <p>Thursday  10:00-9:00</p>
+                <p>Friday  10:00-9:00</p>
+                <p>Saturday  10:00-9:00</p>
+                
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+  
+        <br>
+  
+        <div class="row">
+          <div class="half container">
+            <img src="Images/mapT.png" style="width:350px;;" class="circle" alt="img">
+        </div>
+
+          <div class="half container">
+            <h2 class="text-white">Tecumseh</h2>  
+            <div class="row">
+              <div class="col s6 text-white">
+                <p>Sun & Mon  CLOSED</p>
+                <p>Tuesday  10.00 - 9.00</p>
+                <p>Wednesday  10.00 - 9.00</p>
+                
+              </div>
+              <div class="col s6 text-white">
+                <p>Thursday  10:00 - 9:00</p>
+                <p>Friday  10:00 - 9:00</p>
+                <p>Saturday  10:00 - 9:00</p>
+                
+              </div>
+            </div>      
+        </div>
+          
+          
+        </div>
+
+
+
+  <h2 class="text-white">Reviews</h2>  
+  <hr style="width:200px" class="opacity">
+  <img src="Images/img_avatar2.png" alt="Avatar" class="left circle margin-right" style="width:80px">
+  <p class="text-white"><span class="large margin-right">Chris Fox.</span> <img src="Images/5star.png" style="width: 20%;"></p>
+  <p class="text-white">We go there every Taco Tuesday!</p><br>
+  
+  <img src="Images/img_avatar2.png" alt="Avatar" class="left circle margin-right" style="width:80px">
+  <p class="text-white"><span class="large margin-right">Rebecca Flex.</span><img src="Images/5star.png" style="width: 20%;"></p> 
+  <p class="text-white">No one is better than Peppers!.</p>
     </div>
-    </div>
-    <footer class="container theme">
-      <br>
-    </footer>
-  </div>
+  
+<!-- End Testimonials Section -->
 </div>
 
-
-    <!-- Testimonials & Locations -->
-    <div class="content justify text-grey padding-64" id="about">
-      <div class="content">
-
-      </div>
-    
-  <!-- End Testimonials Section -->
-  </div>
 
   
  
@@ -198,242 +225,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 
 
-<script>
-  var initPhotoSwipeFromDOM = function(gallerySelector) {
-
-// parse slide data (url, title, size ...) from DOM elements 
-// (children of gallerySelector)
-var parseThumbnailElements = function(el) {
-    var thumbElements = el.childNodes,
-        numNodes = thumbElements.length,
-        items = [],
-        figureEl,
-        linkEl,
-        size,
-        item;
-
-    for(var i = 0; i < numNodes; i++) {
-
-        figureEl = thumbElements[i]; // <figure> element
-
-        // include only element nodes 
-        if(figureEl.nodeType !== 1) {
-            continue;
-        }
-
-        linkEl = figureEl.children[0]; // <a> element
-
-        size = linkEl.getAttribute('data-size').split('x');
-
-        // create slide object
-        item = {
-            src: linkEl.getAttribute('href'),
-            w: parseInt(size[0], 10),
-            h: parseInt(size[1], 10)
-        };
-
-
-
-        if(figureEl.children.length > 1) {
-            // <figcaption> content
-            item.title = figureEl.children[1].innerHTML; 
-        }
-
-        if(linkEl.children.length > 0) {
-            // <img> thumbnail element, retrieving thumbnail url
-            item.msrc = linkEl.children[0].getAttribute('src');
-        } 
-
-        item.el = figureEl; // save link to element for getThumbBoundsFn
-        items.push(item);
-    }
-
-    return items;
-};
-
-// find nearest parent element
-var closest = function closest(el, fn) {
-    return el && ( fn(el) ? el : closest(el.parentNode, fn) );
-};
-
-// triggers when user clicks on thumbnail
-var onThumbnailsClick = function(e) {
-    e = e || window.event;
-    e.preventDefault ? e.preventDefault() : e.returnValue = false;
-
-    var eTarget = e.target || e.srcElement;
-
-    // find root element of slide
-    var clickedListItem = closest(eTarget, function(el) {
-        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
-    });
-
-    if(!clickedListItem) {
-        return;
-    }
-
-    // find index of clicked item by looping through all child nodes
-    // alternatively, you may define index via data- attribute
-    var clickedGallery = clickedListItem.parentNode,
-        childNodes = clickedListItem.parentNode.childNodes,
-        numChildNodes = childNodes.length,
-        nodeIndex = 0,
-        index;
-
-    for (var i = 0; i < numChildNodes; i++) {
-        if(childNodes[i].nodeType !== 1) { 
-            continue; 
-        }
-
-        if(childNodes[i] === clickedListItem) {
-            index = nodeIndex;
-            break;
-        }
-        nodeIndex++;
-    }
-
-
-
-    if(index >= 0) {
-        // open PhotoSwipe if valid index found
-        openPhotoSwipe( index, clickedGallery );
-    }
-    return false;
-};
-
-// parse picture index and gallery index from URL (#&pid=1&gid=2)
-var photoswipeParseHash = function() {
-    var hash = window.location.hash.substring(1),
-    params = {};
-
-    if(hash.length < 5) {
-        return params;
-    }
-
-    var vars = hash.split('&');
-    for (var i = 0; i < vars.length; i++) {
-        if(!vars[i]) {
-            continue;
-        }
-        var pair = vars[i].split('=');  
-        if(pair.length < 2) {
-            continue;
-        }           
-        params[pair[0]] = pair[1];
-    }
-
-    if(params.gid) {
-        params.gid = parseInt(params.gid, 10);
-    }
-
-    return params;
-};
-
-var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
-    var pswpElement = document.querySelectorAll('.pswp')[0],
-        gallery,
-        options,
-        items;
-
-    items = parseThumbnailElements(galleryElement);
-
-    // define options (if needed)
-    options = {
-
-        // define gallery index (for URL)
-        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
-
-        getThumbBoundsFn: function(index) {
-            // See Options -> getThumbBoundsFn section of documentation for more info
-            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
-                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-                rect = thumbnail.getBoundingClientRect(); 
-
-            return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
-        }
-
-    };
-
-    // PhotoSwipe opened from URL
-    if(fromURL) {
-        if(options.galleryPIDs) {
-            // parse real index when custom PIDs are used 
-            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
-            for(var j = 0; j < items.length; j++) {
-                if(items[j].pid == index) {
-                    options.index = j;
-                    break;
-                }
-            }
-        } else {
-            // in URL indexes start from 1
-            options.index = parseInt(index, 10) - 1;
-        }
-    } else {
-        options.index = parseInt(index, 10);
-    }
-
-    // exit if index not found
-    if( isNaN(options.index) ) {
-        return;
-    }
-
-    if(disableAnimation) {
-        options.showAnimationDuration = 0;
-    }
-
-    // Pass data to PhotoSwipe and initialize it
-    gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-    gallery.init();
-};
-
-// loop through all gallery elements and bind events
-var galleryElements = document.querySelectorAll( gallerySelector );
-
-for(var i = 0, l = galleryElements.length; i < l; i++) {
-    galleryElements[i].setAttribute('data-pswp-uid', i+1);
-    galleryElements[i].onclick = onThumbnailsClick;
-}
-
-// Parse URL and open gallery if it contains #&pid=3&gid=1
-var hashData = photoswipeParseHash();
-if(hashData.pid && hashData.gid) {
-    openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
-}
-};
-
-// execute above function
-initPhotoSwipeFromDOM('.my-gallery');
-</script>
-
-<script>
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("menu_display");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-  }
-</script>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
