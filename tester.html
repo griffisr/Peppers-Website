@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <title>Peppers</title>
@@ -7,7 +6,15 @@
 <link rel="stylesheet" href="mainStyle.css">
 <link rel="stylesheet" href="redStyle.css">
 <link rel="stylesheet" href="menu_gallery.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+
 
 
 <!-- Core CSS file -->
@@ -24,72 +31,99 @@
 
 <!-- UI JS file -->
 <script src="photoswipe-ui-default.js"></script>
-
-
-
-
-
-<!--Bootstrap-->
-<link rel="stylesheet" href="modalPop.css">
-
-<!--Latest stable release of jQuery Core Library-->
-<script src="https://code.jquery.com/jquery-1.12.2.min.js" integrity="sha256-lZFHibXzMHo3GGeehn1hudTAP3Sc0uKXBXAzHX1sjtk=" crossorigin="anonymous"></script> 
-
-<!--Bootstrap JS-->
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
-</script>
-
-
+ 
 <style>
-    body, html {height: 100%}
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
-    .menu {display: none}
-    .bgimg {
+  .bgimg {
       background-repeat: no-repeat;
       background-size: cover;
       background-image: url("Images/TacosBanner.png");
       min-height: min-content;
     }
-    </style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
 
-<body>
 
-<!-- Side Navigation
-<nav class="sidebar bar-block card animate-left center" style="display:none;" id="mySidebar">
-  <button class="bar-item button" onclick="menu_close()">Close <i class="fa fa-remove"></i></button>
-  <a href="#" onclick= " return menu_close()" class="bar-item button">Home</a>
-  <a href="#" onclick= " return menu_close(), document.getElementById('id01').style.display='block'" class="bar-item button">Menu</a>
-  <a href="#about" onclick= " return menu_close()" class="bar-item button">About Us</a>
-  <a href="#locations" onclick= " return menu_close()" class="bar-item button">Loctions</a>
-  <a href="#updates" onclick= " return menu_close()" class="bar-item button">Find Us On Facebook!</a>
-  <a href="#contact-form" onclick= " return menu_close()" class="bar-item button">Contact Us</a>
-</nav> -->
 
-<!-- Header -->
-<header class="bgimg container theme padding" id="myHeader" style="background-attachment: fixed; background-position: center;">
-  
-<!--<i onclick="menu_open()" class="fa fa-bars xlarge button theme-dark"></i> -->
-<img class="center center_img" src="Images/PeppersLogo.jpg" width="25%" height="25%">
 
-  <div class="center">
-  <h1 class="xxxlarge animate-bottom" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Peppers Mexican Grill</h1>
-    <!--<div class="padding-32">
-      <button class="btn xlarge theme-dark hover-red" onclick="document.getElementById('id01').style.display='block'" style="font-weight:900;">Menu</button>
-    </div>-->
 
-    <div class="center" style="overflow: hidden;">
-      <button id= "menuBtn" class="btn xlarge theme-dark hover-red" onclick="document.getElementById('id01').style.display='block'" style="font-weight:800; border-radius: 12px; width: fit-content;">Menu</button>
-      <button id="aboutBtn" class="btn xlarge theme-dark hover-red" onclick="window.location.href='#about';" style="font-weight:800; border-radius: 12px; width: fit-content; ">About Us</button>
-      <button id="locationBtn" class="btn xlarge theme-dark hover-red" onclick="window.location.href='#locations';" style="font-weight:800; border-radius: 12px; width: fit-content; min-width: 20%;">Locations</button>
-      <button id="btn" class="btn xlarge theme-dark hover-red" style="font-weight:800; border-radius: 12px; width: fit-content; min-width: 20%;">Updates</button>
-    </div>
+<body class="theme-dark">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+<nav class="sidebar bar-block small hide-small center black opacity">
+  <a href="#" class="bar-item button padding-large hover-black opacity hover-opacity-off">
+    <i class="fa fa-home xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#menu" class="bar-item button padding-large hover-black opacity hover-opacity-off">
+    <i class="fa fa-user xxlarge"></i>
+    <p>MENU</p>
+  </a>
+  <a href="#photos" class="bar-item button padding-large hover-black opacity hover-opacity-off">
+    <i class="fa fa-eye xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="#contact" class="bar-item button padding-large hover-black opacity hover-opacity-off">
+    <i class="fa fa-envelope xxlarge"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<div class="top hide-large hide-medium" id="myNavbar">
+  <div class="bar black opacity hover-opacity-off center small">
+    <a href="#" class="bar-item button" style="width:25% !important">HOME</a>
+    <a href="#menu" class="bar-item button" style="width:25% !important">MENU</a>
+    <a href="#" class="bar-item button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="bar-item button" style="width:25% !important">CONTACT</a>
   </div>
-</header>
+</div>
 
+<!-- Page Content -->
+<div class="padding-large" id="main" >
+<br>
+  <!-- Header/Home -->
+  <header class="container padding-32 center black bgimg" id="home" style="background-attachment: fixed; background-position: center;">
 
+    <img src="Images/PeppersLogo.jpg" alt="peppers" class="image" width="30%" height="30%">
+    <h1 class="jumbo" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Peppers <span class="hide-small">Mexican Grill.</span></h1>
+  </header>
 
+  <!--Menu Gallery-->
+  <div class="container padding-64 theme-dark xlarge" id="menu">
+    <div class="content">
+             <!-- Slider main container -->
+<div class="swiper-container" style="height: 1210px;">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper" style="width: 99%; height: 1200px;">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="Images/menu1.jpg" style="width: 99%; height: 99%;"></div>
+    <div class="swiper-slide"><img src="Images/menu2.jpg" style="width: 99%; height: 99%;"></div>
+    <div class="swiper-slide"><img src="Images/menu3.jpg" style="width: 99%; height: 99%;"></div>
+    ...
 
-<!-- Modal -->
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+
+  </div>
+  </div>
+
+  <!-- Modal -->
 <div id="id01" class="modal">
   <div class="modal-content card-4 animate-top">
     <header class="container theme"> 
@@ -136,188 +170,31 @@
 </div>
 
 
-<!-- About Container -->
-<div class="container padding-64 theme-light xlarge" id="about">
+    <!-- Testimonials & Locations -->
+    <div class="content justify text-grey padding-64" id="about">
+      <div class="content">
+
+      </div>
     
-      <ul class="list-inline">
-        <li data-toggle="modal" data-target="#myModal"><a href="#myGallery" data-slide-to="0"><img class="img-thumbnail" src="https://placeimg.com/200/133/nature/1"><br>
-      Caption</a></li>
-        <li data-toggle="modal" data-target="#myModal"><a href="#myGallery" data-slide-to="1"><img class="img-thumbnail" src="https://placeimg.com/200/133/nature/2"><br>
-      Caption</a></li>
-        <li data-toggle="modal" data-target="#myModal"><a href="#myGallery" data-slide-to="2"><img class="img-thumbnail" src="https://placeimg.com/200/133/nature/3"><br>
-      Caption</a></li>
-        <li data-toggle="modal" data-target="#myModal"><a href="#myGallery" data-slide-to="3"><img class="img-thumbnail" src="https://placeimg.com/200/133/nature/4"><br>
-      Caption</a></li>
-        <li data-toggle="modal" data-target="#myModal"><a href="#myGallery" data-slide-to="4"><img class="img-thumbnail" src="https://placeimg.com/200/133/nature/5"><br>
-      Caption</a></li>
-        <li data-toggle="modal" data-target="#myModal"><a href="#myGallery" data-slide-to="5"><img class="img-thumbnail" src="https://placeimg.com/200/133/nature/6"><br>
-      Caption</a></li>
-      <!--end of thumbnails-->
-      </ul>
-
-      <!--begin modal window-->
-<div class="modal fade " id="myModal">
-  <div class="modal-dialog" >
-  <div class="modal-content" style="max-height: 99%; max-width: 99%;">
-  <div class="modal-header">
-  <div class="pull-left">Menu</div>
-  <button type="button" class="close" data-dismiss="modal" title="Close"> X</button>
+  <!-- End Testimonials Section -->
   </div>
-
-  <div class="modal-body">
-  
-      
-  
-  <!--end modal-body--></div>
-  <div class="modal-footer">
-  <div class="pull-left">
-  <small>Photographs by <a href="https://placeimg.com" target="new">placeimg.com</a></small>
-  </div>
-  <button class="btn-sm close" type="button" data-dismiss="modal">Close</button>
-  <!--end modal-footer--></div>
-  <!--end modal-content--></div>
-  <!--end modal-dialoge--></div>
-  <!--end myModal--></div>
-      
-    </div>
-
-
-
-<!--Locations Container-->
-  <div class="container padding-64 theme-dark xlarge" id="locations">
-    <div class="content">
-      <h2>First gallery:</h2>
-
-  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu1.jpg" itemprop="contentUrl" data-size="964x1224">
-          <img src="Images/menu1.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-                                          <figcaption itemprop="caption description">Image caption  1</figcaption>
-                                          
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu2.jpg" itemprop="contentUrl" data-size="964x1224">
-          <img src="Images/menu2.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 2</figcaption>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu3.jpg" itemprop="contentUrl" data-size="964x1224">
-          <img src="Images/menu3.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 3</figcaption>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/menu4.jpg" itemprop="contentUrl" data-size="964x1224">
-          <img src="Images/menu4.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 4</figcaption>
-    </figure>
-
-
-  </div>
-
-
-
-  </div>
-  </div>
-
-
-
-
-
-
-
-  <!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-  <!-- Background of PhotoSwipe. 
-       It's a separate element, as animating opacity is faster than rgba(). -->
-  <div class="pswp__bg"></div>
-
-  <!-- Slides wrapper with overflow:hidden. -->
-  <div class="pswp__scroll-wrap">
-
-      <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-      <div class="pswp__container">
-          <!-- don't modify these 3 pswp__item elements, data is added later on -->
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-          <div class="pswp__item"></div>
-      </div>
-
-      <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-      <div class="pswp__ui pswp__ui--hidden">
-
-          <div class="pswp__top-bar">
-
-              <!--  Controls are self-explanatory. Order can be changed. -->
-
-              <div class="pswp__counter"></div>
-
-              <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-              <button class="pswp__button pswp__button--share" title="Share"></button>
-
-              <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-              <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-              <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-              <!-- element will get class pswp__preloader--active when preloader is running -->
-              <div class="pswp__preloader">
-                  <div class="pswp__preloader__icn">
-                    <div class="pswp__preloader__cut">
-                      <div class="pswp__preloader__donut"></div>
-                    </div>
-                  </div>
-              </div>
-          </div>
-
-          <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-              <div class="pswp__share-tooltip"></div> 
-          </div>
-
-          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-          </button>
-
-          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-          </button>
-
-          <div class="pswp__caption">
-              <div class="pswp__caption__center"></div>
-          </div>
-
-        </div>
-
-      </div>
-
-</div>
-
 
   
-
+ 
 
   <!-- Footer -->
-<footer class="container padding-64 center theme xlarge border-top grayscale">
-  <i class="fa fa-facebook-official hover-opacity"></i>
-  <i class="fa fa-instagram hover-opacity"></i>
-  <i class="fa fa-snapchat hover-opacity"></i>
-  <i class="fa fa-pinterest-p hover-opacity"></i>
-  <i class="fa fa-twitter hover-opacity"></i>
-  <i class="fa fa-linkedin hover-opacity"></i>
-  <p class="medium">Designed and created by: Riley Griffis</p>
-</footer>
+  <footer class="container padding-64 center theme-dark xlarge">
+    <i class="fa fa-facebook-official hover-opacity"></i>
+    <i class="fa fa-instagram hover-opacity"></i>
+    <i class="fa fa-snapchat hover-opacity"></i>
+    <i class="fa fa-pinterest-p hover-opacity"></i>
+    <i class="fa fa-twitter hover-opacity"></i>
+    <i class="fa fa-linkedin hover-opacity"></i>
+    <p class="medium">Designed and created by: Riley Griffis</p>
+  </footer>
 
-
-
-
-<script type="text/javascript" src="mainScript.js"></script>
+<!-- END PAGE CONTENT -->
+</div>
 
 
 
@@ -527,6 +404,61 @@ if(hashData.pid && hashData.gid) {
 
 // execute above function
 initPhotoSwipeFromDOM('.my-gallery');
+</script>
+
+<script>
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("menu_display");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+</script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
 </script>
 
 
