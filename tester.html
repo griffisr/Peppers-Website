@@ -16,22 +16,6 @@
 
 
 
-
-<!-- Core CSS file -->
-<link rel="stylesheet" href="photoswipe.css"> 
-
-<!-- Skin CSS file (styling of UI - buttons, caption, etc.)
-     In the folder of skin CSS file there are also:
-     - .png and .svg icons sprite, 
-     - preloader.gif (for browsers that do not support CSS animations) -->
-<link rel="stylesheet" href="default-skin.css"> 
-
-<!-- Core JS file -->
-<script src="photoswipe.js"></script> 
-
-<!-- UI JS file -->
-<script src="photoswipe-ui-default.js"></script>
- 
 <style>
   .bgimg {
       background-repeat: no-repeat;
@@ -46,7 +30,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+@media only screen and (max-width: 600px) {#main {margin-left: 0; margin-right: 0;}}
 </style>
 
 
@@ -62,16 +46,16 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>HOME</p>
   </a>
   <a href="#menu" class="bar-item button padding-large hover-black opacity hover-opacity-off">
-    <i class="fa fa-user xxlarge"></i>
+    <i class="fa xxlarge"> <img src="Images/menu_cropped.png" style="width: 36px; height: 36px;"></i>
     <p>MENU</p>
   </a>
   <a href="#photos" class="bar-item button padding-large hover-black opacity hover-opacity-off">
-    <i class="fa fa-eye xxlarge"></i>
-    <p>PHOTOS</p>
+    <i class="fa xxlarge"><img src="Images/location.png" style="width: 36px; height: 36px;"></i>
+    <p>LOCATIONS</p>
   </a>
   <a href="#contact" class="bar-item button padding-large hover-black opacity hover-opacity-off">
-    <i class="fa fa-envelope xxlarge"></i>
-    <p>CONTACT</p>
+    <i class="fa xxlarge"> <img src="Images/fb_white.png" style="width: 36px; height: 36px;">  </i>
+    <p>UPDATES</p>
   </a>
 </nav>
 
@@ -79,9 +63,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="top hide-large hide-medium" id="myNavbar">
   <div class="bar black opacity hover-opacity-off center small">
     <a href="#" class="bar-item button" style="width:25% !important">HOME</a>
-    <a href="#menu" class="bar-item button" style="width:25% !important">MENU</a>
-    <a href="#" class="bar-item button" style="width:25% !important">PHOTOS</a>
-    <a href="#contact" class="bar-item button" style="width:25% !important">CONTACT</a>
+    <a href="#menu" class="bar-item button" style="width:25% !important;">MENU</a>
+    <a href="#" class="bar-item button" style="width:25% !important">LOCATIONS</a>
+    <a href="#contact" class="bar-item button" style="width:25% !important">UPDATES</a>
   </div>
 </div>
 
@@ -89,7 +73,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="padding-large" id="main" >
 <br>
   <!-- Header/Home -->
-  <header class="container padding-32 center black bgimg" id="home" style="background-attachment: fixed; background-position: center;">
+  <header class="container padding-32 center black bgimg" id="home" style="background-position: center;">
 
     <img src="Images/PeppersLogo.jpg" alt="peppers" class="image" width="30%" height="30%">
     <h1 class="jumbo" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Peppers <span class="hide-small">Mexican Grill.</span></h1>
@@ -109,12 +93,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu4.jpg" style="width: 100%;"></div>
     <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu5.jpg" style="width: 100%;"></div>
     <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu6.jpg" style="width: 100%;"></div>
-    
-    
-    
-    
-    
-
   </div>
 
   <!-- If we need navigation buttons -->
@@ -206,22 +184,37 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </div>
 
 
-  
- 
 
-  <!-- Footer -->
-  <footer class="container padding-64 center theme-dark xlarge">
-    <i class="fa fa-facebook-official hover-opacity"></i>
-    <i class="fa fa-instagram hover-opacity"></i>
-    <i class="fa fa-snapchat hover-opacity"></i>
-    <i class="fa fa-pinterest-p hover-opacity"></i>
-    <i class="fa fa-twitter hover-opacity"></i>
-    <i class="fa fa-linkedin hover-opacity"></i>
-    <p class="medium">Designed and created by: Riley Griffis</p>
-  </footer>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="olgj0dIF"></script>
+
+<!-- Facebook Plug In -->
+<div class="content justify text-grey padding-64" id="about">
+  <div class="content">
+    <div class="fb-page" data-href="https://www.facebook.com/PeppersMilan/" 
+    data-tabs="timeline" data-width="500" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
+    data-show-facepile="true"><blockquote cite="https://www.facebook.com/PeppersMilan/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a></blockquote>
+  </div>
+    
+  </div>
+
+<!-- End Testimonials Section -->
+</div>
+
 
 <!-- END PAGE CONTENT -->
 </div>
+
+ <!-- Footer -->
+ <footer class="container padding-64 center xlarge" style="background-color: #3b0301;">
+  <i class="fa fa-facebook-official hover-opacity"></i>
+  <i class="fa fa-instagram hover-opacity"></i>
+  <i class="fa fa-snapchat hover-opacity"></i>
+  <i class="fa fa-pinterest-p hover-opacity"></i>
+  <i class="fa fa-twitter hover-opacity"></i>
+  <i class="fa fa-linkedin hover-opacity"></i>
+  <p class="medium">Designed and created by: Riley Griffis</p>
+</footer>
 
 
 
