@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 
 <style>
@@ -40,8 +40,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <body class="theme-dark">
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="sidebar bar-block small hide-small center black opacity">
-  <a href="#" class="bar-item button padding-large hover-black opacity hover-opacity-off">
+<nav class="sidebar bar-block small hide-small center black opacity" style = "max-width: 120px;">
+  <a href="#home" class="bar-item button padding-large hover-black opacity hover-opacity-off">
     <i class="fa fa-home xxlarge"></i>
     <p>HOME</p>
   </a>
@@ -49,11 +49,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa xxlarge"> <img src="Images/menu_cropped.png" style="width: 36px; height: 36px;"></i>
     <p>MENU</p>
   </a>
-  <a href="#photos" class="bar-item button padding-large hover-black opacity hover-opacity-off">
+  <a href="#about" class="bar-item button padding-large hover-black opacity hover-opacity-off">
     <i class="fa xxlarge"><img src="Images/location.png" style="width: 36px; height: 36px;"></i>
     <p>LOCATIONS</p>
   </a>
-  <a href="#contact" class="bar-item button padding-large hover-black opacity hover-opacity-off">
+  <a href="#facebook" class="bar-item button padding-large hover-black opacity hover-opacity-off">
     <i class="fa xxlarge"> <img src="Images/fb_white.png" style="width: 36px; height: 36px;">  </i>
     <p>UPDATES</p>
   </a>
@@ -62,10 +62,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="top hide-large hide-medium" id="myNavbar">
   <div class="bar black opacity hover-opacity-off center small">
-    <a href="#" class="bar-item button" style="width:25% !important">HOME</a>
+    <a href="#home" class="bar-item button" style="width:25% !important">HOME</a>
     <a href="#menu" class="bar-item button" style="width:25% !important;">MENU</a>
-    <a href="#" class="bar-item button" style="width:25% !important">LOCATIONS</a>
-    <a href="#contact" class="bar-item button" style="width:25% !important">UPDATES</a>
+    <a href="#about" class="bar-item button" style="width:25% !important">LOCATIONS</a>
+    <a href="#facebook" class="bar-item button" style="width:25% !important">UPDATES</a>
   </div>
 </div>
 
@@ -76,16 +76,16 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <header class="container padding-32 center black bgimg" id="home" style="background-position: center;">
 
     <img src="Images/PeppersLogo.jpg" alt="peppers" class="image" width="30%" height="30%">
-    <h1 class="jumbo" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Peppers <span class="hide-small">Mexican Grill.</span></h1>
+    <h1 class="jumbo" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Peppers <span class="hide-small">Mexican Grill</span></h1>
   </header>
 
   <!--Menu Gallery-->
   <div class="container padding-64 theme-dark xlarge" id="menu">
     <div class="content">
              <!-- Slider main container -->
-<div class="swiper-container" style="height: fit-content; max-width: 99%; background-color: #8d1007;">
+  <div class="swiper-container" style="height: fit-content; max-width: 99%; background-color: #8d1007; z-index: 0;">
   <!-- Additional required wrapper -->
-  <div class="swiper-wrapper" style="width: 99%; background-color: #8d1007;">
+  <div class="swiper-wrapper" style="width: 99%; background-color: #8d1007; z-index: 0;">
     <!-- Slides -->
     <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu1.jpg" style="width: 100%; "></div>
     <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu2.jpg" style="width: 100%;"></div>
@@ -96,8 +96,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </div>
 
   <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev" style="color: black; opacity: 40%;"></div>
-  <div class="swiper-button-next" style="color: black; opacity: 40%; "></div>
+  <div class="swiper-button-prev" style="color: black; opacity: 70%; z-index: 0;"></div>
+  <div class="swiper-button-next" style="color: black; opacity: 70%; z-index: 0;"></div>
 
 </div>
 
@@ -167,8 +167,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           
         </div>
 
-
-
   <h2 class="text-white">Reviews</h2>  
   <hr style="width:200px" class="opacity">
   <img src="Images/img_avatar2.png" alt="Avatar" class="left circle margin-right" style="width:80px">
@@ -189,9 +187,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="olgj0dIF"></script>
 
 <!-- Facebook Plug In -->
-<div class="content justify text-grey padding-64" id="about">
+<div class="content justify text-grey padding-32" id="facebook" style="display: flex; flex-direction: row; align-content: center;">
   <div class="content">
-    <div class="fb-page" data-href="https://www.facebook.com/PeppersMilan/" 
+    <div style = "width: 100%;" class="fb-page" data-href="https://www.facebook.com/PeppersMilan/" 
     data-tabs="timeline" data-width="500" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
     data-show-facepile="true"><blockquote cite="https://www.facebook.com/PeppersMilan/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a></blockquote>
   </div>
@@ -206,7 +204,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </div>
 
  <!-- Footer -->
- <footer class="container padding-64 center xlarge" style="background-color: #3b0301;">
+ <footer id = "footer-bottom" class="container padding-64 center" style="background-color: #3b0301;">
   <i class="fa fa-facebook-official hover-opacity"></i>
   <i class="fa fa-instagram hover-opacity"></i>
   <i class="fa fa-snapchat hover-opacity"></i>
@@ -243,6 +241,31 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     el: '.swiper-scrollbar',
   },
 });
+
+  $(document).ready(function(){
+    // Add smooth scrolling to all links
+    $("a").on('click', function(event) {
+  
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+  
+        // Store hash
+        var hash = this.hash;
+  
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function(){
+     
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
 </script>
 
 

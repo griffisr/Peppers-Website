@@ -25,16 +25,7 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
 ::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
 /* End extract */
 
-.navBtns{
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-  
-}
 
-.navBtns button{
-  display: table-cell;
-}
 
 .center_img {
     display: block;
@@ -50,11 +41,7 @@ legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}t
   margin-right: auto;
 }
 
-.menu_item{
-  height:350px;
-  background-position: center center;
-  background-size: cover;
-}
+
 
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
@@ -292,15 +279,6 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .border-dark-grey,.hover-border-dark-grey:hover,.border-dark-gray,.hover-border-dark-gray:hover{border-color:#616161!important}
 .border-pale-red,.hover-border-pale-red:hover{border-color:#ffe7e7!important}.border-pale-green,.hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .border-pale-yellow,.hover-border-pale-yellow:hover{border-color:#ffffcc!important}.border-pale-blue,.hover-border-pale-blue:hover{border-color:#e7ffff!important}
-
-
-
-
-
-
-
-
-
 
 
 
