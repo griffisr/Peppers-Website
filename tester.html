@@ -1,7 +1,12 @@
 
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<head>
+  <link rel="icon" 
+      type="image/png" 
+      href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/favicon.ico">
+</head>
+<title>Peppers Mexican Grill</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="mainStyle.css">
@@ -30,6 +35,48 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0; margin-right: 0;}}
+
+.accordion {
+  background-color: #8d1007;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #3b0301;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #8d1007;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+
+
+
 </style>
 <body class="theme-dark">
 
@@ -43,7 +90,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <i class="fa xxlarge"> <img src="Images/menu_cropped.png" style="width: 36px; height: 36px;"></i>
     <p>MENU</p>
   </a>
-  <a href="#about" class="bar-item button padding-large hover-black opacity hover-opacity-off">
+  <a href="#locations" class="bar-item button padding-large hover-black opacity hover-opacity-off">
     <i class="fa xxlarge"><img src="Images/location.png" style="width: 36px; height: 36px;"></i>
     <p>LOCATIONS</p>
   </a>
@@ -67,7 +114,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="padding-large" id="main">
   <!-- Header/Home -->
   <header class="container padding-32 center black bgimg" id="home" style="background-position: center;">
-
     <img src="Images/PeppersLogo.jpg" alt="peppers" class="image" width="30%" height="30%">
     <h1 class="jumbo" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Peppers <span class="hide-small">Mexican Grill</span></h1>
   </header>
@@ -99,115 +145,138 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </div>
 </div>
 
-
-
-
-
+<!--Initialize FB Plugin -->
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="olgj0dIF"></script>
 
 
   
-  <!-- Portfolio Section -->
-  <div class="padding-64 content" id="photos">
+  <!-- Loaction Section -->
+  <div class="content" id="locations">
     <h2 class="center">LOCATIONS</h2>
-<div class="border">
-<div class="bar theme-dark">
-  <button class="bar-item button testbtn padding-16" onclick="openCity(event,'London')" style="width: 49.99%;">Milan</button>
-  <button class="bar-item button testbtn padding-16" onclick="openCity(event,'Paris')" style="width: 49.99%;">Paris</button>
-</div>
 
-<div id="London" class="container city animate-opacity">
-  <h2 style="margin-bottom: 0px;">Milan</h2>
-  <div class="half container">
-    <img src="Images/peppersMilan1.jpg" style="width:100%;;" class="circle" alt="img">  
-</div>
+    <button class="accordion border" style="color: white;">MILAN</button>
+    <div class="panel" style="margin-top: 10px; margin-bottom: 3px;">
 
-  <div class="half container">
-    <div class="half-container">
-      <div style = "width: 100%;" class="fb-page" data-href="https://www.facebook.com/PeppersMilan/" 
-        data-tabs="timeline" data-width="500" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
-        data-show-facepile="true"><blockquote cite="https://www.facebook.com/PeppersMilan/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a></blockquote>
+      <!--Left Side-->
+      <div class="half container">
+
+        <!--Top-->
+        <div class="half-container center">
+          <img src="Images/peppersMilan1.jpg" style="width: 80%;" class="circle" alt="img">
+
+          <ul class= "ul center">
+            <a target="_blank" href= "https://www.google.com/maps/dir//Peppers+mexican+grill+Milan,+39+E+Main+St,+Milan,+MI+48160/@42.084797,-83.6845267,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x883ca3dc2e344043:0xb1edafaaeb6df515!2m2!1d-83.682338!2d42.084797" >39 E Main St, Milan, MI 48160</a>
+            <a href="tel:734-395-2898">734-478-6298</a>
+          </ul>
+
+
+        </div>
+
+        <!--Bottom-->
+        <div class="half-container">
+
+          <ul class= "ul center">
+            <li>SUN CLOSED</li>
+            <li>MON CLOSED</li>
+            <li>TUE 11AM-9PM</li>
+            <li>WED 11AM-9PM</li>
+            <li>THU 11AM-9PM</li>
+            <li>FRI 11AM-10PM</li>
+            <li>SAT 11AM-10PM</li>
+          </ul>
+        </div>
+
       </div>
-  
-    </div>
 
-    <div class="half-container">
-    <div class="row">
-      <div class="col s6 text-white">
-        <p>Sun & Mon  CLOSED</p>
-        <p>Tues  10.00-9.00</p>
-        <p>Wed  10.00-9.00</p>
-        <p>Thu  10:00-9:00</p>
-        <p>Fri  10:00-9:00</p>
-        <p>Sat  10:00-9:00</p>
-        
-      </div>
-    </div>
-  </div>
+      <!--Right Side-->
+      <div class="half container">
 
-  
-
-</div>
-
-<div id="Paris" class="container city animate-opacity">
-  <h2>Tecumseh</h2>
-  <div class="half container">
-    <img src="Images/mapT.png" style="width:100%;;" class="circle" alt="img">
-</div>
-
-  <div class="half container">
-    <h2 class="text-white">Tecumseh</h2>  
-    <div class="row">
-      <div class="col s6 text-white">
-        <p style="font-size: 1;">Sun & Mon  CLOSED</p>
-        <p>Tuesday  10.00 - 9.00</p>
-        <p>Wednesday  10.00 - 9.00</p>
-        
-      </div>
-      <div class="col s6 text-white">
-        <p>Thursday  10:00 - 9:00</p>
-        <p>Friday  10:00 - 9:00</p>
-        <p>Saturday  10:00 - 9:00</p>
-        
-      </div>
-    </div>      
-</div>
-</div>
-</div>
-
-  </div>
-
-
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="olgj0dIF"></script>
-  
-  <!-- Facebook Plug In -->
-  <div class="content justify text-grey padding-32" id="facebook" style="display: flex; flex-direction: row; align-content: center;">
-    <div class="content">
-      <div style = "width: 100%;" class="fb-page" data-href="https://www.facebook.com/PeppersMilan/" 
-      data-tabs="timeline" data-width="500" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
-      data-show-facepile="true"><blockquote cite="https://www.facebook.com/PeppersMilan/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a></blockquote>
-    </div>
+        <!--Top-->
+        <div class="half-container">
+          <div style = "width: 100%;" class="fb-page" data-href="https://www.facebook.com/PeppersMilan/" 
+            data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
+            data-show-facepile="true"><blockquote cite="https://www.facebook.com/PeppersMilan/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a></blockquote>
+          </div>
       
+        </div>
+
+        <!--Bottom-->
+        <div class="half-container">
+
+      
+        </div>
+      </div>
+      
+</div>
+
+<button class="accordion border" style="color: white;">TECUMSEH</button>
+<div class="panel" style="margin-top: 10px; margin-bottom: 10px;">
+      <!--Left Side-->
+      <div class="half container">
+
+        <!--Top-->
+        <div class="half-container center">
+
+            <img src="Images/mapT.png" style="width: 60%;" class="circle" alt="img">
+            <ul class= "ul center">
+              <a target="_blank" href= "https://www.google.com/maps/dir//Pepper's+Mexican+Grill.+Tecumseh,+1410+W+Chicago+Blvd,+Tecumseh,+MI+49286/@42.0057571,-83.9691528,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x883cebf04caa0781:0x29ae395d7dfc85b2!2m2!1d-83.9669641!2d42.0057571" >1410 W Chicago Blvd, Tecumseh, MI 49286</a>
+            </ul>   
+        </div>
+
+        <!--Bottom-->
+        <div class="half-container center">
+          
+
+          
+
+          <h3>HOURS</h3>
+
+          <ul class= "ul center">
+            <li>SUN CLOSED</li>
+            <li>MON CLOSED</li>
+            <li>TUE 11AM-9PM</li>
+            <li>WED 11AM-9PM</li>
+            <li>THU 11AM-9PM</li>
+            <li>FRI 11AM-10PM</li>
+            <li>SAT 11AM-10PM</li>
+          </ul>
+
+          
+        </div>
+      </div>
+
+      <!--Right Side-->
+      <div class="half container">
+
+        <!--Top-->
+        <div class="half-container">
+          <div class="fb-page" data-href="https://www.facebook.com/peppersmx1/?ref=page_internal" data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/peppersmx1/?ref=page_internal" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/peppersmx1/?ref=page_internal">Pepper’s Mexican Grill Tecumseh</a></blockquote></div>
+      
+        </div>
+
+        <!--Bottom-->
+        <div class="half-container">
+
+          
+
+          
+
+      
+        </div>
+      </div>
     </div>
-  
-  <!-- End Testimonials Section -->
+</div>
+
   </div>
   
-
-
 <!-- END PAGE CONTENT -->
 </div>
 
 
  <!-- Footer -->
- <footer id = "footer-bottom" class="container padding-64 center" style="background-color: #3b0301;">
-  <i class="fa fa-facebook-official hover-opacity"></i>
-  <i class="fa fa-instagram hover-opacity"></i>
-  <i class="fa fa-snapchat hover-opacity"></i>
-  <i class="fa fa-pinterest-p hover-opacity"></i>
-  <i class="fa fa-twitter hover-opacity"></i>
-  <i class="fa fa-linkedin hover-opacity"></i>
-  <p class="medium">Designed and created by: Riley Griffis</p>
+ <footer id = "footer-bottom" class="container padding-32 center" style="background-color: #3b0301;">
+  <p class="small" style="opacity: 60%; padding-left: 90%;">Copyright 2021 &copy;</p>
 </footer>
 
 
@@ -263,23 +332,26 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 
 
-  // Tabs
-function openCity(evt, cityName) {
-  var i;
-  var x = document.getElementsByClassName("city");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  var activebtn = document.getElementsByClassName("testbtn");
-  for (i = 0; i < x.length; i++) {
-    activebtn[i].className = activebtn[i].className.replace("theme-dark", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += "theme-dark";
-}
 
-var mybtn = document.getElementsByClassName("testbtn")[0];
-mybtn.click();
+
+
+
+
+//Accordian 
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
 </script>
 
 </body>

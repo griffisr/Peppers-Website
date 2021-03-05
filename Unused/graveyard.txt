@@ -815,3 +815,160 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .border-dark-grey,.hover-border-dark-grey:hover,.border-dark-gray,.hover-border-dark-gray:hover{border-color:#616161!important}
 .border-pale-red,.hover-border-pale-red:hover{border-color:#ffe7e7!important}.border-pale-green,.hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .border-pale-yellow,.hover-border-pale-yellow:hover{border-color:#ffffcc!important}.border-pale-blue,.hover-border-pale-blue:hover{border-color:#e7ffff!important}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TABS FOR LOCATIONS
+
+
+<div class="border">
+    <div class="bar theme-dark">
+      <button class="bar-item button testbtn padding-16" onclick="openCity(event,'London')" style="width: 49.99%;">Milan</button>
+      <button class="bar-item button testbtn padding-16" onclick="openCity(event,'Paris')" style="width: 49.99%;">TECUMSEH</button>
+    </div>
+
+    <div id="London" class="container city animate-opacity">
+      <h2 style="margin-bottom: 0px;">Milan</h2>
+
+      <!--Left Side-->
+      <div class="half container">
+
+        <!--Top-->
+        <div class="half-container">
+          <img src="Images/peppersMilan1.jpg" style="width: 80%;" class="circle" alt="img">
+        </div>
+
+        <!--Bottom-->
+        <div class="half-container">
+
+          <div class="row">
+            <div class="col s6 text-white">
+              <p>Sun & Mon  CLOSED</p>
+              <p>Tues  10.00-9.00</p>
+              <p>Wed  10.00-9.00</p>
+              <p>Thu  10:00-9:00</p>
+              <p>Fri  10:00-9:00</p>
+              <p>Sat  10:00-9:00</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Right Side-->
+      <div class="half container">
+
+        <!--Top-->
+        <div class="half-container">
+          <div style = "width: 100%;" class="fb-page" data-href="https://www.facebook.com/PeppersMilan/" 
+            data-tabs="timeline" data-width="500" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
+            data-show-facepile="true"><blockquote cite="https://www.facebook.com/PeppersMilan/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a></blockquote>
+          </div>
+      
+        </div>
+
+        <!--Bottom-->
+        <div class="half-container">
+
+      
+        </div>
+      </div>
+      
+
+    </div>
+
+    <!--Tecumseh-->
+    <div id="Paris" class="container city animate-opacity">
+      <h2 style="margin-bottom: 0px;">Tecumseh</h2>
+
+      <!--Left Side-->
+      <div class="half container">
+
+        <!--Top-->
+        <div class="half-container">
+          <img src="Images/peppersMilan1.jpg" style="width: 80%;" class="circle" alt="img">
+        </div>
+
+        <!--Bottom-->
+        <div class="half-container">
+
+          <div class="row">
+            <div class="col s6 text-white">
+              <p class= "center" style="margin: 0;">Sun & Mon</p>
+              <p class= "center" style="margin: 0; font-size: 9px;">CLOSED</p>
+              <p class= "center" style="margin: 0;">TUES</p>
+              <p  class= "center" style="margin: 0; font-size: 9px;">10:00-9:00</p>
+              <p class= "center" style="margin: 0;">WED</p>
+              <p class= "center" style="margin: 0; font-size: 9px;">10:00-9:00</p>
+              <p class= "center" style="margin: 0;">THURS</p>
+              <p class= "center" style="margin: 0; font-size: 9px;">10.00-9.00</p>
+              <p class= "center" style="margin: 0;">FRI</p>
+              <p class= "center" style="margin: 0; font-size: 9px;">10:00-10:00</p>
+              <p class= "center" style="margin: 0;">SAT</p>
+              <p class= "center" style="margin: 0; font-size: 9px;">10:00-10:00</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Right Side-->
+      <div class="half container">
+
+        <!--Top-->
+        <div class="half-container">
+          <div style = "width: 100%;" class="fb-page" data-href="https://www.facebook.com/PeppersMilan/" 
+            data-tabs="timeline" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
+            data-show-facepile="true"><blockquote cite="https://www.facebook.com/PeppersMilan/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a></blockquote>
+          </div>
+      
+        </div>
+
+        <!--Bottom-->
+        <div class="half-container">
+
+      
+        </div>
+      </div>
+    </div>
+    <!--End of Tecumseh-->
+    </div>
+
+      </div>
+
+
+
+
+
+
+
+        // Tabs
+function openCity(evt, cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  var activebtn = document.getElementsByClassName("testbtn");
+  for (i = 0; i < x.length; i++) {
+    activebtn[i].className = activebtn[i].className.replace("theme-dark", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += "theme-dark";
+}
+
+var mybtn = document.getElementsByClassName("testbtn")[0];
+mybtn.click();
