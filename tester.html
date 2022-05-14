@@ -1,10 +1,11 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
   <link rel="icon" 
       type="image/png" 
-      href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/favicon.ico">
+      href="https://s3.us-east-2.amazonaws.com/www.peppersmexicangrill.net/Images/favicon+(1).ico">
 </head>
 <title>Peppers Mexican Grill</title>
 <meta charset="UTF-8">
@@ -12,13 +13,8 @@
 <link rel="stylesheet" href="mainStyle.css">
 <link rel="stylesheet" href="redStyle.css">
 <link rel="stylesheet" href="menu_gallery.css">
-
-<link rel="stylesheet" href="Unused/photoswipe.css">
-<link rel="stylesheet" href="Flickity/flickity@2.3.0/dist/flickity.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
 
 
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -103,7 +99,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </nav>
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
-<div class="top hide-large hide-medium theme-footer" id="myNavbar" style="opacity: 70%;">
+<div class="hide-large hide-medium theme-footer" id="myNavbar" style="opacity: 70%;">
   <div class="bar opacity hover-opacity-off center small theme-footer">
     <a href="#home" class="bar-item button" style="width:25% !important">HOME</a>
     <a href="#menu" class="bar-item button" style="width:25% !important;">MENU</a>
@@ -120,304 +116,37 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <h1 class="jumbo" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Peppers <span class="hide-small">Mexican Grill</span></h1>
   </header>
 
+ <!--Menu Gallery-->
+ <div class="container padding-32 theme-dark xlarge" id="menu">
+  <div class="content">
+    <h2 class="text-light-grey center" style="margin-bottom: 0px;">MENU</h2>
+  <hr style="width:100%" class="opacity center">
 
-
-
-<div class="carousel" data-flickity-options='{ "wrapAround": true }'>
-  <div class="carousel-cell"><img src="Images/menu1.png"/></div>
-  <div class="carousel-cell"><img src="Images/menu2.png"/></div>
-  <div class="carousel-cell"><img src="Images/menu3.png"/></div>
-  <div class="carousel-cell"><img src="Images/menu4.png"/></div>
-  <div class="carousel-cell"><img src="Images/menu5.png"/></div>
-  <div class="carousel-cell"><img src="Images/menu6.png"/></div>
+<!-- Swiper -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu1.png" style="width: 100%; "></div>
+  <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu2.png" style="width: 100%;"></div>
+  <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu4.png" style="width: 100%;"></div>
+  <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu3.png" style="width: 100%;"></div>
+  <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu5.png" style="width: 100%;"></div>
+  <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu6.png" style="width: 100%;"></div>
+  </div>
+  <div class="swiper-button-next swiper-button-white" style="color: black;"></div>
+  <div class="swiper-button-prev swiper-button-white" style="color: black;"></div></div>
 </div>
 
-
-<h2>First gallery:</h2>
-
-  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" itemprop="contentUrl" data-size="1024x1024">
-          <img src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-                                          <figcaption itemprop="caption description">Image caption  1</figcaption>
-                                          
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
-          <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 2</figcaption>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
-          <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 3</figcaption>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
-          <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 4</figcaption>
-    </figure>
-
-
-  </div>
-
-<h2>Second gallery:</h2>
-
-  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-
-  
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
-          <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 2.1</figcaption>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
-          <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 2.2</figcaption>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
-          <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 2.3</figcaption>
-    </figure>
-
-
-  </div>
-
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element, as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-          </div>
-
-        </div>
-
-</div><h2>First gallery:</h2>
-
-  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm3.staticflickr.com/2567/5697107145_a4c2eaa0cd_o.jpg" itemprop="contentUrl" data-size="1024x1024">
-          <img src="https://farm3.staticflickr.com/2567/5697107145_3c27ff3cd1_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-                                          <figcaption itemprop="caption description">Image caption  1</figcaption>
-                                          
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
-          <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 2</figcaption>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
-          <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 3</figcaption>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
-          <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 4</figcaption>
-    </figure>
-
-
-  </div>
-
-<h2>Second gallery:</h2>
-
-  <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-
-
-
-
-
-
-
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_b.jpg" itemprop="contentUrl" data-size="964x1024">
-          <img src="https://farm2.staticflickr.com/1043/5186867718_06b2e9e551_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 2.1</figcaption>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_b.jpg" itemprop="contentUrl" data-size="1024x683">
-          <img src="https://farm7.staticflickr.com/6175/6176698785_7dee72237e_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 2.2</figcaption>
-    </figure>
-
-    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-      <a href="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_b.jpg" itemprop="contentUrl" data-size="1024x768">
-          <img src="https://farm6.staticflickr.com/5023/5578283926_822e5e5791_m.jpg" itemprop="thumbnail" alt="Image description" />
-      </a>
-      <figcaption itemprop="caption description">Image caption 2.3</figcaption>
-    </figure>
-
-
-  </div>
-
-
-
-<!-- Root element of PhotoSwipe. Must have class pswp. -->
-<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-
-    <!-- Background of PhotoSwipe. 
-         It's a separate element, as animating opacity is faster than rgba(). -->
-    <div class="pswp__bg"></div>
-
-    <!-- Slides wrapper with overflow:hidden. -->
-    <div class="pswp__scroll-wrap">
-
-        <!-- Container that holds slides. PhotoSwipe keeps only 3 slides in DOM to save memory. -->
-        <!-- don't modify these 3 pswp__item elements, data is added later on. -->
-        <div class="pswp__container">
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-            <div class="pswp__item"></div>
-        </div>
-
-        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-        <div class="pswp__ui pswp__ui--hidden">
-
-            <div class="pswp__top-bar">
-
-                <!--  Controls are self-explanatory. Order can be changed. -->
-
-                <div class="pswp__counter"></div>
-
-                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-                <button class="pswp__button pswp__button--share" title="Share"></button>
-
-                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-                <!-- element will get class pswp__preloader--active when preloader is running -->
-                <div class="pswp__preloader">
-                    <div class="pswp__preloader__icn">
-                      <div class="pswp__preloader__cut">
-                        <div class="pswp__preloader__donut"></div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                <div class="pswp__share-tooltip"></div> 
-            </div>
-
-            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-            </button>
-
-            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-            </button>
-
-            <div class="pswp__caption">
-                <div class="pswp__caption__center"></div>
-            </div>
-
-          </div>
-
-        </div>
-
 </div>
-
-
-
-
+</div>
 
 <!--Initialize FB Plugin -->
 <div id="fb-root"></div>
-
-
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="olgj0dIF"></script>
 
 
   
   <!-- Loaction Section -->
-  <div class="content" id="locations" style="padding-top: 15px;">
+  <div class="content" id="locations">
     <h2 class="center">LOCATIONS</h2>
 
     <button class="accordion border" style="color: white;">MILAN</button>
@@ -463,59 +192,59 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           </div>
       </div>
       
-    </div>
-
-  <button class="accordion border" style="color: white;">TECUMSEH</button>
-  <div class="panel" style="margin-top: 10px; margin-bottom: 10px;">
-        
-        <!--Left Side-->
-        <div class="half container">
-
-          <!--Top-->
-          <div class="half-container center">
-            <img src="Images/peppersTecumseh.jpg" style="width: 50%;" class="circle" alt="img">
-
-            <ul class= "ul center">
-              <a  style = "color: #3b0301; font-size: 20px;"target="_blank" href= "https://www.google.com/maps/dir//Pepper's+Mexican+Grill.+Tecumseh,+1410+W+Chicago+Blvd,+Tecumseh,+MI+49286/@42.0057571,-83.9691528,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x883cebf04caa0781:0x29ae395d7dfc85b2!2m2!1d-83.9669641!2d42.0057571" > 1410 W Chicago Blvd,</a>
-              <br>
-              <a  style = "text-decoration: none; color: #3b0301; font-size: 20px;"target="_blank" href= "https://www.google.com/maps/dir//Pepper's+Mexican+Grill.+Tecumseh,+1410+W+Chicago+Blvd,+Tecumseh,+MI+49286/@42.0057571,-83.9691528,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x883cebf04caa0781:0x29ae395d7dfc85b2!2m2!1d-83.9669641!2d42.0057571" >Tecumseh, MI 49286</a>
-              <br>
-              <a style = "text-decoration: none; color: #3b0301; font-size: 20px;" href="tel:517-815-1283">517-815-1283</a>
-            </ul>
-
-
-          </div>
-
-          <!--Bottom-->
-          <div class="half-container">
-
-            <ul class= "ul center">
-              <li>SUN 11AM-8PM</li>
-              <li>MON CLOSED</li>
-              <li>TUE 11AM-8PM</li>
-              <li>WED 11AM-8PM</li>
-              <li>THU 11AM-8PM</li>
-              <li>FRI 11AM-8PM</li>
-              <li>SAT 11AM-8PM</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <!--Right Side-->
-        <div class="half container center" style="padding-top: 5%;">
-          <div style = "width: 100%;" class="fb-page" data-href="https://www.facebook.com/peppersmx1/?ref=page_internal" 
-              data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
-              data-show-facepile="true"><blockquote cite="https://www.facebook.com/peppersmx1/?ref=page_internal" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a></blockquote>
-            </div>
-        </div>
-  </div>
-  </div>
-
 </div>
+
+<button class="accordion border" style="color: white;">TECUMSEH</button>
+<div class="panel" style="margin-top: 10px; margin-bottom: 10px;">
+      
+      <!--Left Side-->
+      <div class="half container">
+
+        <!--Top-->
+        <div class="half-container center">
+          <img src="Images/peppersTecumseh.jpg" style="width: 50%;" class="circle" alt="img">
+
+          <ul class= "ul center">
+            <a  style = "color: #3b0301; font-size: 20px;"target="_blank" href= "https://www.google.com/maps/dir//Pepper's+Mexican+Grill.+Tecumseh,+1410+W+Chicago+Blvd,+Tecumseh,+MI+49286/@42.0057571,-83.9691528,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x883cebf04caa0781:0x29ae395d7dfc85b2!2m2!1d-83.9669641!2d42.0057571" > 1410 W Chicago Blvd,</a>
+            <br>
+            <a  style = "text-decoration: none; color: #3b0301; font-size: 20px;"target="_blank" href= "https://www.google.com/maps/dir//Pepper's+Mexican+Grill.+Tecumseh,+1410+W+Chicago+Blvd,+Tecumseh,+MI+49286/@42.0057571,-83.9691528,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x883cebf04caa0781:0x29ae395d7dfc85b2!2m2!1d-83.9669641!2d42.0057571" >Tecumseh, MI 49286</a>
+            <br>
+            <a style = "text-decoration: none; color: #3b0301; font-size: 20px;" href="tel:517-815-1283">517-815-1283</a>
+          </ul>
+
+
+        </div>
+
+        <!--Bottom-->
+        <div class="half-container">
+
+          <ul class= "ul center">
+            <li>SUN 11AM-8PM</li>
+            <li>MON CLOSED</li>
+            <li>TUE 11AM-8PM</li>
+            <li>WED 11AM-8PM</li>
+            <li>THU 11AM-8PM</li>
+            <li>FRI 11AM-8PM</li>
+            <li>SAT 11AM-8PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!--Right Side-->
+      <div class="half container center" style="padding-top: 5%;">
+        <div style = "width: 100%;" class="fb-page" data-href="https://www.facebook.com/peppersmx1/?ref=page_internal" 
+            data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
+            data-show-facepile="true"><blockquote cite="https://www.facebook.com/peppersmx1/?ref=page_internal" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a></blockquote>
+          </div>
+      </div>
+    </div>
+</div>
+
+  </div>
   
 <!-- END PAGE CONTENT -->
-
+</div>
 
 
  <!-- Footer -->
@@ -524,42 +253,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </footer>
 
 
-
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<script src="Unused/photoswipe-ui-default.js"></script>
-<script src="Unused/photoswipe.js"></script>
-
-
-<script type="text/javascript" src="Flickity/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
-
-
 <script>
-
-
-
-  const swiper = new Swiper('.swiper-container', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-  // And if we need scrollbar
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-});
+   var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
 
   $(document).ready(function(){
     // Add smooth scrolling to all links
@@ -608,237 +310,6 @@ for (i = 0; i < acc.length; i++) {
     } 
   });
 }
-
-
-
-
-var $carousel = $('.carousel').flickity({
-  initialIndex: 1
-});
-var $logger = $('.logger');
-
-$carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {
-  // dismiss if cell was not clicked
-  if ( !cellElement ) {
-    return;
-  }
-  // change cell background with .is-clicked
-  $carousel.find('.is-clicked').removeClass('is-clicked');
-  $( cellElement ).addClass('is-clicked');
-  $logger.text( 'Cell ' + ( cellIndex + 1 )  + ' clicked' );
-});
-
-
-
-
-
-
-var initPhotoSwipeFromDOM = function(gallerySelector) {
-
-// parse slide data (url, title, size ...) from DOM elements 
-// (children of gallerySelector)
-var parseThumbnailElements = function(el) {
-    var thumbElements = el.childNodes,
-        numNodes = thumbElements.length,
-        items = [],
-        figureEl,
-        linkEl,
-        size,
-        item;
-
-    for(var i = 0; i < numNodes; i++) {
-
-        figureEl = thumbElements[i]; // <figure> element
-
-        // include only element nodes 
-        if(figureEl.nodeType !== 1) {
-            continue;
-        }
-
-        linkEl = figureEl.children[0]; // <a> element
-
-        size = linkEl.getAttribute('data-size').split('x');
-
-        // create slide object
-        item = {
-            src: linkEl.getAttribute('href'),
-            w: parseInt(size[0], 10),
-            h: parseInt(size[1], 10)
-        };
-
-
-
-        if(figureEl.children.length > 1) {
-            // <figcaption> content
-            item.title = figureEl.children[1].innerHTML; 
-        }
-
-        if(linkEl.children.length > 0) {
-            // <img> thumbnail element, retrieving thumbnail url
-            item.msrc = linkEl.children[0].getAttribute('src');
-        } 
-
-        item.el = figureEl; // save link to element for getThumbBoundsFn
-        items.push(item);
-    }
-
-    return items;
-};
-
-// find nearest parent element
-var closest = function closest(el, fn) {
-    return el && ( fn(el) ? el : closest(el.parentNode, fn) );
-};
-
-// triggers when user clicks on thumbnail
-var onThumbnailsClick = function(e) {
-    e = e || window.event;
-    e.preventDefault ? e.preventDefault() : e.returnValue = false;
-
-    var eTarget = e.target || e.srcElement;
-
-    // find root element of slide
-    var clickedListItem = closest(eTarget, function(el) {
-        return (el.tagName && el.tagName.toUpperCase() === 'FIGURE');
-    });
-
-    if(!clickedListItem) {
-        return;
-    }
-
-    // find index of clicked item by looping through all child nodes
-    // alternatively, you may define index via data- attribute
-    var clickedGallery = clickedListItem.parentNode,
-        childNodes = clickedListItem.parentNode.childNodes,
-        numChildNodes = childNodes.length,
-        nodeIndex = 0,
-        index;
-
-    for (var i = 0; i < numChildNodes; i++) {
-        if(childNodes[i].nodeType !== 1) { 
-            continue; 
-        }
-
-        if(childNodes[i] === clickedListItem) {
-            index = nodeIndex;
-            break;
-        }
-        nodeIndex++;
-    }
-
-
-
-    if(index >= 0) {
-        // open PhotoSwipe if valid index found
-        openPhotoSwipe( index, clickedGallery );
-    }
-    return false;
-};
-
-// parse picture index and gallery index from URL (#&pid=1&gid=2)
-var photoswipeParseHash = function() {
-    var hash = window.location.hash.substring(1),
-    params = {};
-
-    if(hash.length < 5) {
-        return params;
-    }
-
-    var vars = hash.split('&');
-    for (var i = 0; i < vars.length; i++) {
-        if(!vars[i]) {
-            continue;
-        }
-        var pair = vars[i].split('=');  
-        if(pair.length < 2) {
-            continue;
-        }           
-        params[pair[0]] = pair[1];
-    }
-
-    if(params.gid) {
-        params.gid = parseInt(params.gid, 10);
-    }
-
-    return params;
-};
-
-var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) {
-    var pswpElement = document.querySelectorAll('.pswp')[0],
-        gallery,
-        options,
-        items;
-
-    items = parseThumbnailElements(galleryElement);
-
-    // define options (if needed)
-    options = {
-
-        // define gallery index (for URL)
-        galleryUID: galleryElement.getAttribute('data-pswp-uid'),
-
-        getThumbBoundsFn: function(index) {
-            // See Options -> getThumbBoundsFn section of documentation for more info
-            var thumbnail = items[index].el.getElementsByTagName('img')[0], // find thumbnail
-                pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-                rect = thumbnail.getBoundingClientRect(); 
-
-            return {x:rect.left, y:rect.top + pageYScroll, w:rect.width};
-        }
-
-    };
-
-    // PhotoSwipe opened from URL
-    if(fromURL) {
-        if(options.galleryPIDs) {
-            // parse real index when custom PIDs are used 
-            // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
-            for(var j = 0; j < items.length; j++) {
-                if(items[j].pid == index) {
-                    options.index = j;
-                    break;
-                }
-            }
-        } else {
-            // in URL indexes start from 1
-            options.index = parseInt(index, 10) - 1;
-        }
-    } else {
-        options.index = parseInt(index, 10);
-    }
-
-    // exit if index not found
-    if( isNaN(options.index) ) {
-        return;
-    }
-
-    if(disableAnimation) {
-        options.showAnimationDuration = 0;
-    }
-
-    // Pass data to PhotoSwipe and initialize it
-    gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-    gallery.init();
-};
-
-// loop through all gallery elements and bind events
-var galleryElements = document.querySelectorAll( gallerySelector );
-
-for(var i = 0, l = galleryElements.length; i < l; i++) {
-    galleryElements[i].setAttribute('data-pswp-uid', i+1);
-    galleryElements[i].onclick = onThumbnailsClick;
-}
-
-// Parse URL and open gallery if it contains #&pid=3&gid=1
-var hashData = photoswipeParseHash();
-if(hashData.pid && hashData.gid) {
-    openPhotoSwipe( hashData.pid ,  galleryElements[ hashData.gid - 1 ], true, true );
-}
-};
-
-// execute above function
-initPhotoSwipeFromDOM('.my-gallery');
-
 </script>
 
 </body>

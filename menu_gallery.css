@@ -21,8 +21,8 @@
 
 
 .swiper-container {
-  width: fit-content;
-  height: fit-content;
+  width: 1300px;
+  height: 100px;
 }
 
 body {font-family: Verdana, sans-serif; margin:0}
