@@ -102,10 +102,12 @@ body {font-family: Verdana, sans-serif; margin:0}
 
 
 
+
+
+
 * { box-sizing: border-box; }
 
 body { font-family: sans-serif; }
-
 .carousel {
   background: #8d1007;
 }
@@ -148,14 +150,14 @@ body { font-family: sans-serif; }
 }
 
 @media screen and ( min-width: 768px ) {
-  .carousel-cell {
+  .carousel-cell{
     height: 1200px;
   }
 }
 
 @media screen and ( min-width: 960px ) {
 
-  .carousel-cell {
+  .carousel-cell{
     height: 1750px;
   }
 
@@ -188,4 +190,52 @@ body { font-family: sans-serif; }
 /* hide disabled button */
 .flickity-prev-next-button:disabled {
   display: none;
+}
+
+
+.carousel-cell.is-clicked {
+  
+}
+
+
+.my-gallery {
+  /* flex-box, center image in cell */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-align-items: center;
+          align-items: center;
+}
+.my-gallery img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  /* dim unselected */
+  opacity: 0.7;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
+          transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+}
+.my-gallery figure {
+  display: block;
+  float: left;
+  margin: 0 5px 5px 0;
+  width: 70%;
+  height: 600px;
+}
+.my-gallery figcaption {
+  display: none;
+}
+
+.image-thumbnail {
+  width: 70%;
+  height: 600px;
+  padding: 10px;
+  cursor: pointer
 }
