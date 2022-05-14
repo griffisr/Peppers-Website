@@ -1,10 +1,11 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
   <link rel="icon" 
       type="image/png" 
-      href="https://riley-griffis.s3.us-east-2.amazonaws.com/peppers/favicon.ico">
+      href="https://s3.us-east-2.amazonaws.com/www.peppersmexicangrill.net/Images/favicon+(1).ico">
 </head>
 <title>Peppers Mexican Grill</title>
 <meta charset="UTF-8">
@@ -12,11 +13,8 @@
 <link rel="stylesheet" href="mainStyle.css">
 <link rel="stylesheet" href="redStyle.css">
 <link rel="stylesheet" href="menu_gallery.css">
-<link rel="stylesheet" href="Flickity/flickity@2.3.0/dist/flickity.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
 
 
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
@@ -118,51 +116,41 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <h1 class="jumbo" style="color: #8d1007; text-shadow: 3px 2px #ffffff;">Peppers <span class="hide-small">Mexican Grill</span></h1>
   </header>
 
-
-
-
-
-
-<!-- Flickity HTML init -->
-<div class="carousel js-flickity" data-flickity-options='{ "wrapAround": true }'>
-  <!-- images from unsplash.com -->
-  <div class="carousel-cell">
-    <img src="Images/menu1.png"/>
-  </div>
-  <div class="carousel-cell">
-    <img src="Images/menu2.png" />
-  </div>
-  <div class="carousel-cell">
-    <img src="Images/menu3.png" />
-  </div>
-  <div class="carousel-cell">
-    <img src="Images/menu3.png"  />
-  </div>
-  <div class="carousel-cell">
-    <img src="Images/menu4.png"  />
-  </div>
-  <div class="carousel-cell">
-    <img src="Images/menu5.png"  />
-  </div>
-  <div class="carousel-cell">
-    <img src="Images/menu6.png" />
-  </div>
+ <!--Menu Gallery-->
+ <div class="container padding-32 theme-dark xlarge" id="menu">
+  <div class="content">
+    <h2 class="text-light-grey center" style="margin-bottom: 0px;">MENU</h2>
+  <hr style="width:100%" class="opacity center">
+           <!-- Slider main container -->
+<div class="swiper-container" style="height: fit-content; max-width: 99%; background-color: #8d1007; z-index: 0;">
+<!-- Additional required wrapper -->
+<div class="swiper-wrapper" style="width: 99%; background-color: #8d1007; z-index: 0;">
+  <!-- Slides -->
+  <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu1.png" style="width: 100%; "></div>
+  <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu2.png" style="width: 100%;"></div>
+  <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu4.png" style="width: 100%;"></div>
+  <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu3.png" style="width: 100%;"></div>
+  <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu5.png" style="width: 100%;"></div>
+  <div class="swiper-slide" style="width: fit-content; background-color: #8d1007;"><img src="Images/menu6.png" style="width: 100%;"></div>
 </div>
 
+<!-- If we need navigation buttons -->
+<div class="swiper-button-prev" style="color: black; opacity: 60%; z-index: 0;"></div>
+<div class="swiper-button-next" style="color: black; opacity: 60%; z-index: 0;"></div>
 
+</div>
 
-
+</div>
+</div>
 
 <!--Initialize FB Plugin -->
 <div id="fb-root"></div>
-
-
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0" nonce="olgj0dIF"></script>
 
 
   
   <!-- Loaction Section -->
-  <div class="content" id="locations" style="padding-top: 15px;">
+  <div class="content" id="locations">
     <h2 class="center">LOCATIONS</h2>
 
     <button class="accordion border" style="color: white;">MILAN</button>
@@ -208,59 +196,59 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           </div>
       </div>
       
-    </div>
-
-  <button class="accordion border" style="color: white;">TECUMSEH</button>
-  <div class="panel" style="margin-top: 10px; margin-bottom: 10px;">
-        
-        <!--Left Side-->
-        <div class="half container">
-
-          <!--Top-->
-          <div class="half-container center">
-            <img src="Images/peppersTecumseh.jpg" style="width: 50%;" class="circle" alt="img">
-
-            <ul class= "ul center">
-              <a  style = "color: #3b0301; font-size: 20px;"target="_blank" href= "https://www.google.com/maps/dir//Pepper's+Mexican+Grill.+Tecumseh,+1410+W+Chicago+Blvd,+Tecumseh,+MI+49286/@42.0057571,-83.9691528,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x883cebf04caa0781:0x29ae395d7dfc85b2!2m2!1d-83.9669641!2d42.0057571" > 1410 W Chicago Blvd,</a>
-              <br>
-              <a  style = "text-decoration: none; color: #3b0301; font-size: 20px;"target="_blank" href= "https://www.google.com/maps/dir//Pepper's+Mexican+Grill.+Tecumseh,+1410+W+Chicago+Blvd,+Tecumseh,+MI+49286/@42.0057571,-83.9691528,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x883cebf04caa0781:0x29ae395d7dfc85b2!2m2!1d-83.9669641!2d42.0057571" >Tecumseh, MI 49286</a>
-              <br>
-              <a style = "text-decoration: none; color: #3b0301; font-size: 20px;" href="tel:517-815-1283">517-815-1283</a>
-            </ul>
-
-
-          </div>
-
-          <!--Bottom-->
-          <div class="half-container">
-
-            <ul class= "ul center">
-              <li>SUN 11AM-8PM</li>
-              <li>MON CLOSED</li>
-              <li>TUE 11AM-8PM</li>
-              <li>WED 11AM-8PM</li>
-              <li>THU 11AM-8PM</li>
-              <li>FRI 11AM-8PM</li>
-              <li>SAT 11AM-8PM</li>
-            </ul>
-          </div>
-
-        </div>
-
-        <!--Right Side-->
-        <div class="half container center" style="padding-top: 5%;">
-          <div style = "width: 100%;" class="fb-page" data-href="https://www.facebook.com/peppersmx1/?ref=page_internal" 
-              data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
-              data-show-facepile="true"><blockquote cite="https://www.facebook.com/peppersmx1/?ref=page_internal" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a></blockquote>
-            </div>
-        </div>
-  </div>
-  </div>
-
 </div>
+
+<button class="accordion border" style="color: white;">TECUMSEH</button>
+<div class="panel" style="margin-top: 10px; margin-bottom: 10px;">
+      
+      <!--Left Side-->
+      <div class="half container">
+
+        <!--Top-->
+        <div class="half-container center">
+          <img src="Images/peppersTecumseh.jpg" style="width: 50%;" class="circle" alt="img">
+
+          <ul class= "ul center">
+            <a  style = "color: #3b0301; font-size: 20px;"target="_blank" href= "https://www.google.com/maps/dir//Pepper's+Mexican+Grill.+Tecumseh,+1410+W+Chicago+Blvd,+Tecumseh,+MI+49286/@42.0057571,-83.9691528,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x883cebf04caa0781:0x29ae395d7dfc85b2!2m2!1d-83.9669641!2d42.0057571" > 1410 W Chicago Blvd,</a>
+            <br>
+            <a  style = "text-decoration: none; color: #3b0301; font-size: 20px;"target="_blank" href= "https://www.google.com/maps/dir//Pepper's+Mexican+Grill.+Tecumseh,+1410+W+Chicago+Blvd,+Tecumseh,+MI+49286/@42.0057571,-83.9691528,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x883cebf04caa0781:0x29ae395d7dfc85b2!2m2!1d-83.9669641!2d42.0057571" >Tecumseh, MI 49286</a>
+            <br>
+            <a style = "text-decoration: none; color: #3b0301; font-size: 20px;" href="tel:517-815-1283">517-815-1283</a>
+          </ul>
+
+
+        </div>
+
+        <!--Bottom-->
+        <div class="half-container">
+
+          <ul class= "ul center">
+            <li>SUN 11AM-8PM</li>
+            <li>MON CLOSED</li>
+            <li>TUE 11AM-8PM</li>
+            <li>WED 11AM-8PM</li>
+            <li>THU 11AM-8PM</li>
+            <li>FRI 11AM-8PM</li>
+            <li>SAT 11AM-8PM</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!--Right Side-->
+      <div class="half container center" style="padding-top: 5%;">
+        <div style = "width: 100%;" class="fb-page" data-href="https://www.facebook.com/peppersmx1/?ref=page_internal" 
+            data-tabs="timeline" data-width="500" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" 
+            data-show-facepile="true"><blockquote cite="https://www.facebook.com/peppersmx1/?ref=page_internal" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/PeppersMilan/">Pepper’s Mexican Grill</a></blockquote>
+          </div>
+      </div>
+    </div>
+</div>
+
+  </div>
   
 <!-- END PAGE CONTENT -->
-
+</div>
 
 
  <!-- Footer -->
@@ -269,18 +257,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </footer>
 
 
-
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-
-<script type="text/javascript" src="Flickity/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
-
-
 <script>
-
-
-
   const swiper = new Swiper('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',
