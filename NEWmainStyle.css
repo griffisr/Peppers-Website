@@ -635,7 +635,7 @@ body {
   }
 
   .about-wrapper {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   /* ......./ food /......... */
