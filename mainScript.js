@@ -5,13 +5,36 @@
     "use strict";
     
 
-
-
-
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        // code to run on mobile devices
+        
 
     var swiper = new Swiper(".mySwiper", {
 
 
+
+        
+        // Navigation arrows
+      loop: true,
+      loopAdditionalSlides: 5,
+      initialSlide: 4,
+      centeredSlides: true,
+      navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+      },
+      nextButton: ".swiper-button-next",
+      prevButton: ".swiper-button-prev",
+      slidesPerView: 1,
+      });
+      } else {
+        // code to run on non-mobile devices
+       
+    var swiper = new Swiper(".mySwiper", {
+
+
+
+        
         // Navigation arrows
       loop: true,
       loopAdditionalSlides: 5,
@@ -25,6 +48,11 @@
       prevButton: ".swiper-button-prev",
       slidesPerView: 2.7,
       });
+      }
+      
+
+
+
 
 
       
