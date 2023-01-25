@@ -18,14 +18,13 @@
       loop: true,
       loopAdditionalSlides: 5,
       initialSlide: 4,
-      centeredSlides: true,
       navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
       },
       nextButton: ".swiper-button-next",
       prevButton: ".swiper-button-prev",
-      slidesPerView: 1,
+      slidesPerView: 1.25,
       });
       } else {
         // code to run on non-mobile devices

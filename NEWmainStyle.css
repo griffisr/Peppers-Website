@@ -656,6 +656,11 @@ body {
   .img-container {
     margin: 0;
   }
+
+
+  .swiper-wrapper{
+    width: 68vw!important;
+}
 }
 
 @media (max-width: 600px) {
