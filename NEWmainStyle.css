@@ -142,7 +142,7 @@ body {
 /* ......//about us//...... */
 
 #about {
-  padding: 50px 0;
+  padding: 2vh 0;
 }
 
 .about-wrapper {
@@ -454,6 +454,9 @@ body {
     border-radius: 50%;
   }
   .fb-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
   }
 
@@ -633,6 +636,19 @@ body {
 
   .swiper-wrapper{
     width: 68vw!important;
+}
+
+
+
+.panel{
+    flex-direction: column;
+}
+.half-container{
+    width: 100%;
+    height: 10%;
+}
+.fb-view{
+    width: 100%;
 }
 }
 
