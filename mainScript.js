@@ -45,7 +45,7 @@
       },
       nextButton: ".swiper-button-next",
       prevButton: ".swiper-button-prev",
-      slidesPerView: 2.7,
+      slidesPerView: 2.6,
       });
       }
       
