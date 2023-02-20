@@ -193,14 +193,18 @@ body {
     transform: translate(0);
   }
 }
+.about-img{
+  max-height: 80vh;
+  width: 98%;
+  display: flex;
+  justify-self: center;
+  border-radius: 100%;
+}
 
 .about-img img {
-  display: block;
   height: 100%;
-  max-width: 100%;
+  width: 100%;
   margin: auto;
-  object-fit: cover;
-  object-position: right;
   border-radius: 50%;
 }
 

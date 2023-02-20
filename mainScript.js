@@ -16,8 +16,8 @@
         
         // Navigation arrows
       loop: true,
-      loopAdditionalSlides: 5,
-      initialSlide: 4,
+      loopAdditionalSlides: 10,
+      initialSlide: 5,
       navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -36,8 +36,8 @@
         
         // Navigation arrows
       loop: true,
-      loopAdditionalSlides: 5,
-      initialSlide: 4,
+      loopAdditionalSlides: 10,
+      initialSlide: -4,
       centeredSlides: true,
       navigation: {
           nextEl: '.swiper-button-next',
@@ -45,7 +45,7 @@
       },
       nextButton: ".swiper-button-next",
       prevButton: ".swiper-button-prev",
-      slidesPerView: 2.6,
+      slidesPerView: 3,
       });
       }
       
