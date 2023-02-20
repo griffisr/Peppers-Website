@@ -3,18 +3,12 @@
 
   $(document).ready(function(){
     "use strict";
-    
 
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         // code to run on mobile devices
         
 
     var swiper = new Swiper(".mySwiper", {
-
-
-
-        
-        // Navigation arrows
       loop: true,
       loopAdditionalSlides: 10,
       initialSlide: 5,
@@ -26,37 +20,33 @@
       prevButton: ".swiper-button-prev",
       slidesPerView: 1.25,
       });
+
+
+
+
       } else {
         // code to run on non-mobile devices
        
     var swiper = new Swiper(".mySwiper", {
-
-
-
-        
-        // Navigation arrows
       loop: true,
       loopAdditionalSlides: 10,
-      initialSlide: -4,
-      centeredSlides: true,
+      initialSlide: 4,
       navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
       },
       nextButton: ".swiper-button-next",
       prevButton: ".swiper-button-prev",
-      slidesPerView: 3,
+      slidesPerView: 1.75,
       });
       }
-      
-
-
-
-
-
-      
+            
 
   });
+
+
+
+
 
 
 
@@ -64,7 +54,7 @@
     // code to run on mobile devices
     var menuImages = document.getElementsByClassName('menu-img');
     for (var i = 0; i < menuImages.length; i++) {
-      menuImages[i].removeEventListener('mouseover', function() {
+      menuImages[i].addEventListener('mouseover', function() {
           new Drift(this, {
               inlinePane: false,
           });
@@ -82,6 +72,9 @@
     }
   }
   
+
+
+
 
 
 
