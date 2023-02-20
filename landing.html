@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" 
+          type="image/png" 
+          href="https://s3.us-east-2.amazonaws.com/www.peppersmexicangrill.net/Images/favicon+(1).ico">
+    
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Get a taste of Mexico at Peppers Mexican Grill, a family-owned and operated restaurant serving authentic Mexican cuisine in Milan, Tecumseh, and Blissfield, MI.">
+        <meta name="robots" content="index,follow">
+        <title>Peppers Mexican Grill</title>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+          integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link rel="stylesheet" href="landingStyle.css">
+    
+    
+
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    
+    
+    
+        <!--Initialize jquery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    
+    
+      </head>
+<body>
+    
+
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#showcase">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#food-menu">Menu</a></li>
+                <li><a href="#food">Locations</a></li>
+            </ul>
+            <img src="Images/PeppersLogo.jpg" alt="peppers" class="nav-peppers-logo logo">
+        </div>
+    </nav>
+  
+
+
+    <section class="showcase-area" id="showcase">
+        <div class="showcase-container">
+          <img src="Images/PeppersLogo.jpg" alt="peppers" class="peppers-logo">
+          <h1 class="jumbo main-title">Peppers <span class="hide-small">Mexican Grill</span></h1>
+          <a href="#food-menu" class="btn btn-primary">Menu</a>
+        </div>
+      </section>
+
+
+
+      <section id="food-menu">
+        <h2 class="food-menu-heading">Menu</h2>
+        <div class="food-menu-container container">
+
+
+
+       <!-- Swiper -->
+        <div class="swiper mySwiper">
+      <!--<div class="nav-btn-wrapper"><div class="swiper-button-prev">&#8249;</div></div> -->
+        <div class="swiper-wrapper">
+        <div class="swiper-slide"><img class='menu-img' src="Images/menu6.png" data-zoom="Images/menu6.png"></div>
+        <div class="swiper-slide"><img class='menu-img' src="Images/menu1.png" data-zoom="Images/menu1.png"></div>
+        <div class="swiper-slide"><img class='menu-img' src="Images/menu2.png" data-zoom="Images/menu2.png"></div>
+        <div class="swiper-slide"><img class='menu-img' src="Images/menu3.png" data-zoom="Images/menu4.png"></div>
+        <div class="swiper-slide"><img class='menu-img' src="Images/menu4.png" data-zoom="Images/menu3.png"></div>
+        <div class="swiper-slide"><img class='menu-img' src="Images/menu5.png" data-zoom="Images/menu5.png"></div>
+        </div>
+    
+        <div class="swiper-button-prev swiper-nav-btn"></div>
+        <div class="swiper-button-next swiper-nav-btn"></div>
+   <!-- <div class="nav-btn-wrapper"><div class="swiper-button-next">&#8250;</div></div></div> -->
+
+
+
+
+        </div>
+        </div>
+      </section>
+
+
+
+
+
+
+
+      <footer id="footer">
+        <p class="footer-text" style="opacity: 60%; padding-left: 80%;">Copyright 2023 <a class="copyright" target="_blank" href="http://snapboothphotos.com/">&copy;</a></p>
+      </footer>
+
+
+
+
+
+
+      <script src="mainScript.js"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+      <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+      <script>
+
+
+
+        $(document).ready(function () {
+          // Add smooth scrolling to all links
+          $("a").on("click", function (event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+              // Prevent default anchor click behavior
+              event.preventDefault();
+    
+              // Store hash
+              var hash = this.hash;
+    
+              // Using jQuery's animate() method to add smooth page scroll
+              // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+              $("html, body").animate(
+                {
+                  scrollTop: $(hash).offset().top,
+                },
+                800,
+                function () {
+                  // Add hash (#) to URL when done scrolling (default click behavior)
+                  window.location.hash = hash;
+                }
+              );
+            } // End if
+          });
+        });
+      </script>
+</body>
+</html>

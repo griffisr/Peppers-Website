@@ -11,14 +11,14 @@
     var swiper = new Swiper(".mySwiper", {
       loop: true,
       loopAdditionalSlides: 10,
-      initialSlide: 4,
+      initialSlide: 1,
       navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
       },
       nextButton: ".swiper-button-next",
       prevButton: ".swiper-button-prev",
-      slidesPerView: 1.25,
+      slidesPerView: 1,
       });
 
 
@@ -30,7 +30,7 @@
     var swiper = new Swiper(".mySwiper", {
       loop: true,
       loopAdditionalSlides: 10,
-      initialSlide: 4,
+      initialSlide: 1,
       navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -54,7 +54,7 @@
     // code to run on mobile devices
     var menuImages = document.getElementsByClassName('menu-img');
     for (var i = 0; i < menuImages.length; i++) {
-      menuImages[i].addEventListener('mouseover', function() {
+      menuImages[i].removeEventListener('mouseover', function() {
           new Drift(this, {
               inlinePane: false,
           });

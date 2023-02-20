@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color:#8d1007;
+}
+
+/* ///////////..utility classes../////////// */
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 50px;
+  cursor: pointer;
+  outline: none;
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: small;
+}
+
+.btn-primary {
+  color: #fff;
+  background: #8d1007;
+}
+
+.btn-primary:hover {
+  background: #650d0f;
+  transition: background 0.3s ease-in-out;
+}
+
+
+
+/* ............/navbar/............ *
+
+/* desktop mode............/// */
+
+.navbar input[type="checkbox"],
+.navbar .hamburger-lines {
+  display: none;
+}
+
+.navbar {
+  box-shadow: 0px 5px 10px 0px #aaa;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  opacity: 0.85;
+  height: 5vh;
+  z-index: 12;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  height: 6vh;
+  align-items: center;
+}
+
+.menu-items {
+  order: 2;
+  display: flex;
+}
+
+.menu-items li {
+  list-style: none;
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.menu-items a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu-items a:hover {
+  color: #117964;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-peppers-logo {
+  order: 1;
+  height: 4vh;
+  display:flex;
+  margin-bottom: .5vh;
+}
+
+
+
+
+
+/* ............//// Showcase styling ////......... */
+
+.showcase-area {
+    height: 50vh;
+    background: linear-gradient(
+        rgba(240, 240, 240, 0.144),
+        rgba(255, 255, 255, 0.336)
+      ),
+      url("https://s3.us-east-2.amazonaws.com/peppersmexicangrill.net/Images/tacos.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 1.6rem;
+  }
+  
+  .main-title {
+    text-transform: uppercase;
+    color: #8d1007; 
+    text-shadow: 3px 2px #ffffff;
+  }
+  
+  .peppers-logo{
+      padding-top: 6vh;
+      width: 20vw;
+  }
+  
+
+
+/*Menu Section*/
+
+.food-menu-container{
+    width: 98vw;
+    height: 90vh;
+    display: flex;
+    padding: 2em 2em 2em 2em;
+
+}
+.swiper-slide img{
+    width: 100%;
+}
+
+.swiper-nav-btn{
+    color: black!important;
+}
+
+.swiper-button-next:hover {
+    background-color: rgb(255, 255, 255);
+    height: 80px;
+    opacity: 90%;
+}
+.swiper-button-prev:hover {
+    background-color: rgb(255, 255, 255);
+    height: 80px;
+    opacity: 90%;
+}
+
+
+
+
+
+
+
+  /*      Footer      */
+
+
+  /* ........ Contact Us........... */
+.ul{
+    list-style-type: none;
+    width: 80%;
+    text-align: center;
+}
+.ul li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+}
+
+.half-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.hours{
+    width: 100%!important;
+    padding-bottom: 1rem!important;
+}
+
+#footer{
+  padding: 2.6rem;
+  background-color:#3b0301;
+}
+#footer p{
+    color: #ffff;
+}
+
+.copyright{
+    color: #ffff;
+}
