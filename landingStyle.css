@@ -150,6 +150,22 @@ body {
 
 /*Menu Section*/
 
+  .drift-zoom-pane {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    z-index: 99!important;
+}
+
+.food-menu-heading {
+    text-align: center;
+    font-size: 3.4rem;
+    font-weight: 400;
+    color: #ffffff;
+    border-bottom: 1px solid rgb(221,221,221);
+    margin: 0 5% 0 5%;
+  }
+
 .food-menu-container{
     width: 98vw;
     height: 90vh;
@@ -159,6 +175,7 @@ body {
 }
 .swiper-slide img{
     width: 100%;
+    z-index: 1!important;
 }
 
 .swiper-nav-btn{
