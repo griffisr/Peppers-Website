@@ -9,6 +9,7 @@
         
 
     var swiper = new Swiper(".mySwiper", {
+      autoHeight: true,
       loop: true,
       loopAdditionalSlides: 10,
       initialSlide: 1,
@@ -28,6 +29,7 @@
         // code to run on non-mobile devices
        
     var swiper = new Swiper(".mySwiper", {
+      autoHeight: true,
       loop: true,
       loopAdditionalSlides: 10,
       initialSlide: 1,
@@ -38,6 +40,7 @@
       nextButton: ".swiper-button-next",
       prevButton: ".swiper-button-prev",
       slidesPerView: 1.75,
+      
       });
       }
             
