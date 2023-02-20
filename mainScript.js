@@ -11,7 +11,7 @@
     var swiper = new Swiper(".mySwiper", {
       loop: true,
       loopAdditionalSlides: 10,
-      initialSlide: 5,
+      initialSlide: 4,
       navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
