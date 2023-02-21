@@ -9,6 +9,7 @@
         
 
     var swiper = new Swiper(".mySwiper", {
+      zoom: true,
       autoHeight: true,
       loop: true,
       loopAdditionalSlides: 10,
