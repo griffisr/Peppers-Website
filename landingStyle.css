@@ -217,8 +217,8 @@ body {
 /*Menu Section*/
 
   .drift-zoom-pane {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     z-index: 99!important;
 }
@@ -243,20 +243,25 @@ body {
 }
 
 .swiper-nav-btn{
-    color: black!important;
+    color: white!important;
+    padding: 6em 5em 6em 5em;
+
+
 }
 
 .swiper-button-next:hover {
+    color: black!important;
     background-color: rgb(255, 255, 255);
-    height: 80px;
     opacity: 90%;
-    transition: background-color 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    transform: scale(1.5); 
 }
 .swiper-button-prev:hover {
-    background-color: rgb(255, 255, 255);
-    height: 80px;
-    opacity: 90%;
-    transition: background-color 0.4s ease-in-out;
+  color: black!important;
+  background-color: rgb(255, 255, 255);
+  opacity: 90%;
+  transition: all 0.4s ease-in-out;
+  transform: scale(1.5); 
 
 }
 
