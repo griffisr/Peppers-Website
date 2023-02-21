@@ -16,6 +16,7 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color:#8d1007;
+  max-width: 99vw;
 }
 
 /* ///////////..utility classes../////////// */
