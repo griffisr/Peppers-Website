@@ -29,7 +29,7 @@
         // code to run on non-mobile devices
        
     var swiper = new Swiper(".mySwiper", {
-      centeredslides: true,
+      centeredSlides: true,
       autoHeight: true,
       loop: true,
       loopAdditionalSlides: 10,
@@ -40,7 +40,7 @@
       },
       nextButton: ".swiper-button-next",
       prevButton: ".swiper-button-prev",
-      slidesPerView: 1,
+      slidesPerView: 1.5,
       
       });
       }
@@ -70,7 +70,7 @@
     for (var i = 0; i < menuImages.length; i++) {
       menuImages[i].addEventListener('mouseover', function() {
           new Drift(this, {
-              zoomFactor: 1.2,
+              zoomFactor: 1.15,
               inlinePane: false,
           });
       });
