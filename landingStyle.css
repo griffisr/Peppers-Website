@@ -502,9 +502,10 @@ body {
   
     .about-wrapper {
       flex-direction: column;
+      align-items: center;
     }
     .about-img{
-      padding: 0!important;
+      padding: 10px 0 0 0!important;
     }
     .about-text{
       padding-bottom: 0px;
