@@ -249,6 +249,9 @@ body {
     background-color: #8d1007;
     padding: 6em 5em 6em 5em;
     border-radius: 80px;
+    border-color: white!important;
+    border-style: solid;
+    border-width: thin;
 }
 
 .swiper-button-next:hover {
