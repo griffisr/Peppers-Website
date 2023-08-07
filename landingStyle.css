@@ -270,7 +270,17 @@ body {
 
 }
 
-
+.coming-soon-container{
+  width: 100%;
+  max-width: 98vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.coming-soon{
+  width: auto;
+  max-width: 90vw;
+}
 
 /* ........./ Locations /.......... */
 
