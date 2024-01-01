@@ -43,6 +43,7 @@ body {
 .btn-primary {
   color: #fff;
   background: #8d1007;
+  margin-bottom: 5vh;
 }
 
 .btn-primary:hover {
@@ -117,7 +118,7 @@ body {
 /* ............//// Showcase styling ////......... */
 
 .showcase-area {
-    height: 50vh;
+   /* height: 50vh; */
     background: linear-gradient(
         rgba(240, 240, 240, 0.144),
         rgba(255, 255, 255, 0.336)
@@ -144,7 +145,7 @@ body {
   }
   
   .peppers-logo{
-      padding-top: 6vh;
+      padding-top: 10vh;
       width: 20vw;
   }
   
@@ -628,10 +629,11 @@ body {
   @media only screen and (max-height: 800px) {
   
       .navbar-container{
-          height: 6vh!important;
+          height: 7vh!important;
+          margin-top: .5vh!important;
       }
       .navbar{
-          height: 7vh!important;
+          height: 8vh!important;
       }
       .nav-peppers-logo{
           height: 5vh!important;
